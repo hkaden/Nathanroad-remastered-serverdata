@@ -1,0 +1,1 @@
+AddTextEntry("WEAPON_MDR2", "DT MDR 762x51")

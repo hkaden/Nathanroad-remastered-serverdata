@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>w_ar_mdr2_mag7</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2_mag6</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2_mag5</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2_mag4</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2_mag3</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2_mag2</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2_mag1</modelName>
+			<txdName>w_ar_mdr2_mag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_ar_mdr2</modelName>
+			<txdName>w_ar_mdr2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_supp3</modelName>
+			<txdName>mdr2_supp</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_supp2</modelName>
+			<txdName>mdr2_supp</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_supp1</modelName>
+			<txdName>mdr2_supp</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_scope6</modelName>
+			<txdName>mdr2_scope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_scope5</modelName>
+			<txdName>mdr2_scope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_scope4</modelName>
+			<txdName>mdr2_scope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_scope3</modelName>
+			<txdName>mdr2_scope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_scope2</modelName>
+			<txdName>mdr2_scope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_scope1</modelName>
+			<txdName>mdr2_scope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_grip3</modelName>
+			<txdName>mdr2_grip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_grip2</modelName>
+			<txdName>mdr2_grip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>mdr2_grip1</modelName>
+			<txdName>mdr2_grip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>w_at_mdr2_flsh1</modelName>
+			<txdName>w_at_mdr2_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>w_at_mdr2_flsh2</modelName>
+			<txdName>w_at_mdr2_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>w_at_mdr2_flsh3</modelName>
+			<txdName>w_at_mdr2_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>w_at_mdr2_flsh4</modelName>
+			<txdName>w_at_mdr2_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>w_at_mdr2_flsh5</modelName>
+			<txdName>w_at_mdr2_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>w_at_mdr2_flsh6</modelName>
+			<txdName>w_at_mdr2_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>			
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

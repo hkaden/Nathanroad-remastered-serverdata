@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link href="scripting/jquery-ui.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <!-- <link rel="stylesheet" href="https://assets.pixelworldrp.com/fonts/pro.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/b-1.5.6/fc-3.2.5/kt-2.5.0/r-2.2.2/datatables.min.css"/> -->
+    
+        <title>RealisticLife Banking</title>
+    </head>
+    <body>
+        <div class="container" id="bankingContainer">
+            <div class="row">
+                <div class="col-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="images/logo.png" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="nav flex-column nav-pills p-2 shadow-lg" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background:rgba(34, 34, 34, 0.8); border-radius: 5px;">
+                                    <a class="nav-link active m-1" id="bankingHome-tab" data-toggle="pill" href="#bankingHome" role="tab" aria-controls="bankingHome" aria-selected="true">主頁</a>
+                                    <a class="nav-link m-1" id="bankingWithdraw-tab" data-toggle="pill" href="#bankingWithdraw" role="tab" aria-controls="bankingWithdraw" aria-selected="false">序號兌換</a>
+                                    <a class="nav-link m-1" id="bankingDeposit-tab" data-toggle="pill" href="#bankingDeposit" role="tab" aria-controls="bankingDeposit" aria-selected="false">點數商城</a>
+                                    <a class="nav-link m-1" id="exchage-tab" data-toggle="pill" href="#exchage" role="tab" aria-controls="exchage" aria-selected="false">兌換</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button class="btn btn-block" id="logoffbutton" style="background-color: #a7000b; color: white">退出</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <!-- Content Area -->
+                    <div class="tab-content p-2 shadow-lg" id="v-pills-tabContent" style="max-height:780px; min-height:780px;">
+                        <div class="tab-pane fade show active" id="bankingHome" role="tabpanel" aria-labelledby="bankingHome-tab" style="position: relative; top: 54px;">
+                            <div class="container-fluid p-2">
+                                <div class="row">
+                                    <div class="col-12 title"><h3 style="font-size: 24px;">歡迎 <span id="customerName"></span></h3></div>
+                                    <div class="col-12 content"><p style="font-size: 15px;">你可以從這裡查看你餘下的點數。</p></div>
+                                </div>
+                            </div>
+                            <div class="row" id="successRow" style="display:none;">
+                                <div class="col-12">
+                                    <div class="alert alert-success" role="alert" id="successMessage"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card mb-3 pointRemind" style="background:rgba(34, 34, 34, 0.8); color: #fff">
+                                        <div class="card-header" ><i class="fad fa-fw fa-money-bill-wave"></i> 剩餘點數</div>
+                                        <div class="card-body" style="text-align: center; color: #fbc308;">
+                                        <h5 class="card-title" id="currentBalance" style="font-size: 35px; "> 0 </h5>
+                                        <p class="card-text" style="font-size: 15px;">點</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card mb-3 pointRemind" style="background:rgba(34, 34, 34, 0.8); color: #fff">
+                                        <div class="card-header" ><i class="fad fa-fw fa-money-bill-wave"></i> 傑克燈籠數量</div>
+                                        <div class="card-body" style="text-align: center; color: #fbc308;">
+                                        <h5 class="card-title" id="currentPumpkin" style="font-size: 35px; "> 0 </h5>
+                                        <p class="card-text" style="font-size: 15px;">個</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="bankingWithdraw" role="tabpanel" aria-labelledby="bankingWithdraw-tab">
+                            <div class="container-fluid p-2" style="position: relative; top: 54px;">
+                                <div class="row">
+                                    <div class="col-12 title"><h3 style="font-size: 24px;">序號兌換</h3></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="font-size: 15px; color: white;">
+                                        你可以在此兌換由活動 / 贊助 / 官方派發之所有序號
+                                    </div>
+                                </div>
+
+                                <div class="row" style="position: relative; top: 20px;">
+                                    <div class="col-12">
+                                        <div class="card mb-3" style="background:rgba(34, 34, 34, 0.8); color: white">
+                                            <div class="card-body">
+                                                <div class="container-fluid">
+                                                    <div class="row" id="withdrawError" style="display:none;">
+                                                        <div class="col-12">
+                                                            <div class="alert alert-danger" role="alert" id="withdrawErrorMsg"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 content" style="font-size: 20px;">請輸入序號</div>
+                                                    </div>
+                                                    <div class="row mt-2">
+                                                        <div class="col-12"><input type="text" class="form-control" id="key" name="key"></div>
+                                                        <div class="col-12 text-center"><button class="btn" style="background-color: #fbc308; color: #000; margin-top: 20px; width: 100%;" id="initiateWithdraw">兌換</button></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="bankingDeposit" role="tabpanel" aria-labelledby="bankingDeposit-tab">
+                            <div class="container-fluid p-2" style="position: relative; top: 54px;">
+                                <div class="row">
+                                    <div class="col-12 title"><h3 style="font-size: 24px;">點數商城</h3></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="font-size: 15px; color: white;">
+                                        這裡是點數商城，你可以於這購買所有點數可購買的物品。
+                                    </div>
+                                </div>
+                                <div class="row shopItemContent"></div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="exchage" role="tabpanel" aria-labelledby="exchage-tab">
+                            <div class="container-fluid p-2" style="position: relative; top: 54px;">
+                                <div class="row">
+                                    <div class="col-12 title"><h3 style="font-size: 24px;">兌換中心</h3></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="font-size: 15px; color: white;">
+                                        這裡是兌換中心，以物品兌換商城物品
+                                    </div>
+                                </div>
+                                <div class="row exchageContent"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bankingSavings" role="tabpanel" aria-labelledby="bankingSavings-tab">
+                        <div class="container-fluid p-2" style="position: relative; top: 54px;">
+                            <div class="row">
+                                <div class="col-12 title"><h4 style="font-size: 24px;">Your Savings Account</h4></div>
+                            </div>
+                            <div class="row" style="position: relative; top: 20px;">
+                                <div class="col-4" style="color: #00af17">
+                                    <div class="card mb-3" style="background:rgba(34, 34, 34, 0.8); color: #00af17; min-height:150px;">
+                                        <div class="card-header"><i class="fad fa-fw fa-money-bill-wave"></i> Savings Account Balance</div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">€<span id="savingsBalance"></span></h5>
+                                            <p class="card-text" style="font-size: 10px;">This is currently how much you have saved in your savings account</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-8">
+                                    <div class="card mb-3" style="background:rgba(34, 34, 34, 0.8); color: #00c3ff">
+                                        <div class="card-header">Savings Withdraw & Deposits</div>
+                                        <div class="card-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-4"><label for="savingsAction"><small>Action</small></label>
+                                                        <select name="savingsAction" id="savingsAction" class="form-control" style="font-size: 13px;">
+                                                            <option selected disabled value="def">Please Select</option>
+                                                            <option value="deposit">Deposit</option>
+                                                            <option value="withdraw">Withdrawal</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <label for="savingsTAmount"><small>Requested Amount</small></label>
+                                                        <input type="number" id="savingsTAmount" name="savingsTAmount" class="form-control" placeholder="€" style="font-size: 13px;">
+                                                    </div>
+                                                    <div class="col-4 my-auto">
+                                                        <button class="btn btn-block" id="makeSavingsTransfer" style="background-color: #a7000b; font-size: 12px; color: white">Complete Request</button>
+                                                    </div>
+                                                </div>                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="scripting/external/jquery/jquery.js"></script>
+        <script src="scripting/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/b-1.5.6/fc-3.2.5/kt-2.5.0/r-2.2.2/datatables.min.js"></script>
+        <script type="text/javascript" src="https://rawcdn.githack.com/ciedooy/bootstrap-notify/8b9db51fb5522a2cc1d4c119df376d2fabadb4b9/bootstrap-notify.min.js"></script>
+        <script type="text/javascript" src="https://rawcdn.githack.com/shaack/bootstrap-input-spinner/master/src/bootstrap-input-spinner.js"></script>
+
+        <script src="main.js"></script>
+    </body>
+</html>

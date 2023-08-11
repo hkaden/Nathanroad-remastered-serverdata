@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>akmscope1</modelName>
+			<txdName>akmscope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope2</modelName>
+			<txdName>akmscope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope3</modelName>
+			<txdName>akmscope2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope4</modelName>
+			<txdName>akmscope2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope5</modelName>
+			<txdName>akmscope2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope6</modelName>
+			<txdName>akmscope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope7</modelName>
+			<txdName>akmscope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmscope8</modelName>
+			<txdName>akmscope</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmstock1</modelName>
+			<txdName>akmstock</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmstock2</modelName>
+			<txdName>akmstock</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock3</modelName>
+			<txdName>akmstock3</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock4</modelName>
+			<txdName>akmstock3</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock5</modelName>
+			<txdName>akmstock3</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock6</modelName>
+			<txdName>akmstock2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock7</modelName>
+			<txdName>akmstock2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock8</modelName>
+			<txdName>akmstock2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmstock9</modelName>
+			<txdName>akmstock2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard1</modelName>
+			<txdName>akmhandguard</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard2</modelName>
+			<txdName>akmhandguard</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard3</modelName>
+			<txdName>akmhandguard</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard4</modelName>
+			<txdName>akmhandguard</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard5</modelName>
+			<txdName>akmhandguard</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard6</modelName>
+			<txdName>akmhandguard2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard7</modelName>
+			<txdName>akmhandguard2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmhandguard8</modelName>
+			<txdName>akmhandguard2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmhandguard9</modelName>
+			<txdName>akmhandguard2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmhandguard10</modelName>
+			<txdName>akmhandguard2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmdustcover1</modelName>
+			<txdName>akmdustcover</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmdustcover2</modelName>
+			<txdName>akmdustcover</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmdustcover3</modelName>
+			<txdName>akmdustcover</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmdustcover4</modelName>
+			<txdName>akmdustcover</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>			
+		<Item>
+			<modelName>akmmag1</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag2</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag3</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag4</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag5</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag6</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag7</modelName>
+			<txdName>akmmag</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag8</modelName>
+			<txdName>akmmag2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag9</modelName>
+			<txdName>akmmag2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag10</modelName>
+			<txdName>akmmag2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag11</modelName>
+			<txdName>akmmag2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>akmmag12</modelName>
+			<txdName>akmmag2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmsupp1</modelName>
+			<txdName>akmsupp</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmsupp2</modelName>
+			<txdName>akmsupp</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmsupp3</modelName>
+			<txdName>akmsupp</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmpistolgrip1</modelName>
+			<txdName>akmpistolgrip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>		
+		<Item>
+			<modelName>akmpistolgrip2</modelName>
+			<txdName>akmpistolgrip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmpistolgrip3</modelName>
+			<txdName>akmpistolgrip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmpistolgrip4</modelName>
+			<txdName>akmpistolgrip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>	
+		<Item>
+			<modelName>akmpistolgrip5</modelName>
+			<txdName>akmpistolgrip</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>			
+		<Item>
+			<modelName>akm</modelName>
+			<txdName>akm</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

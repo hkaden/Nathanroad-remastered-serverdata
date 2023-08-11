@@ -1,0 +1,49 @@
+<!---------------------------------------------------------//
+//-------------- RealWorld - VRP UserList -----------------//
+//-------------- https://discord.gg/realw -----------------//
+//---------------------------------------------------------->
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="header">
+			<div class="logo-text">市民列表</div>
+			<div class="logo"><img src="logo.png"></div>
+			<div id="tabType" class="jobs"></div>
+			<div class="controls"><a href="#" class="btn-close">關閉 X</a></div>
+		</div>
+		<div class="playerlist">
+			<table id="playerlistHeader" class="player-list">
+				<tr class="heading" style="text-align: center;">
+					<th>ID</th>
+					<th>名字</th>
+					<th>職業</th>
+					<th>ID</th>
+					<th>名字</th>
+					<th>職業</th>
+					<th>ID</th>
+					<th>名字</th>
+					<th>職業</th>
+				</tr>
+			</table>
+			<div class="playerlistScroller">
+				<table id="playerlist" class="player-list"></table>
+			</div>
+		</div>
+		<div class="serverinfo">
+			👨‍⚕️&nbsp;總人數:&nbsp;<span id="player_count">0</span>/<span
+				id="max_players">0</span>&nbsp;&nbsp;&nbsp;🎥&nbsp;遊玩時間:&nbsp;<span id="play_time">00小時 00分鐘</span>
+				&nbsp;&nbsp;&nbsp;🖥️&nbsp;伺服器已開啟:&nbsp;<span id="uptime">00小時 00分鐘</span>
+		</div>
+	</div>
+
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+		  <modelName>markomods-stidvc2011</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-mag1</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-mag2</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-barrel1</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-barrel2</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-barrel3</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide1</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide2</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide3</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide4</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide5</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide6</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide7</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-slide8</modelName>
+		  <txdName>markomods-stidvc2011</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-muzzle1</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-muzzle2</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-muzzle3</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-flsh1</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-flsh2</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-flsh3</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-flsh4</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+		<Item>
+		  <modelName>markomods-stidvc2011-flsh5</modelName>
+		  <txdName>markomods-stidvc2011-comp</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="75"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

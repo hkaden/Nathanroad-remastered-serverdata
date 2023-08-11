@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponComponentInfoBlob>
+	<Infos>
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_01</Name>
+			<Model>glock_reciever</Model>
+			<LocName>"Slide"</LocName>
+			<LocDesc>"Slide"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>			
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>	
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_02</Name>
+			<Model>glock_reciever2</Model>
+			<LocName>"Slide2"</LocName>
+			<LocDesc>"Slide2"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>		
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_03</Name>
+			<Model>glock_reciever3</Model>
+			<LocName>"Slide3"</LocName>
+			<LocDesc>"Slide3"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>	
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_04</Name>
+			<Model>glock_reciever4</Model>
+			<LocName>"Slide4"</LocName>
+			<LocDesc>"Slide4"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>	
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_05</Name>
+			<Model>glock_reciever5</Model>
+			<LocName>"Slide5"</LocName>
+			<LocDesc>"Slide5"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>		
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_06</Name>
+			<Model>glock_reciever6</Model>
+			<LocName>"Slide6"</LocName>
+			<LocDesc>"Slide6"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>	
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_07</Name>
+			<Model>glock_reciever7</Model>
+			<LocName>"Slide7"</LocName>
+			<LocDesc>"Slide7"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>	
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_08</Name>
+			<Model>glock_reciever8</Model>
+			<LocName>"Slide8"</LocName>
+			<LocDesc>"Slide8"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>	
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_SLIDE_09</Name>
+			<Model>glock_reciever9</Model>
+			<LocName>"Slide9"</LocName>
+			<LocDesc>"Slide9"</LocDesc>
+			<AttachBone>AAPScop</AttachBone>
+			<WeaponAttachBone>WAPScop</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>				
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="-5"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="0"/>
+			<HudRange value="-5"/>
+		</Item>			
+	</Infos>
+	<InfoBlobName/>
+</CWeaponComponentInfoBlob>
+

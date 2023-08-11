@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>mcxspear</modelName>
+			<txdName>mcxspear2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>
+		<Item>
+			<modelName>mcxspear_body_01</modelName>
+			<txdName>mcxspear</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>
+		<Item>
+			<modelName>mcxspear_body_02</modelName>
+			<txdName>mcxspear2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_01</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>			
+		<Item>
+			<modelName>mcxspear_flsh_02</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_03</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_04</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_05</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_06</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_07</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_08</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_09</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_10</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_flsh_11</modelName>
+			<txdName>mcxspear_flsh</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_grip_01</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_grip_02</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_03</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_04</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_05</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_06</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_07</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_08</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_09</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_10</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_grip_11</modelName>
+			<txdName>mcxspear_grips</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_mag_01</modelName>
+			<txdName>mcxspear</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>			
+		<Item>
+			<modelName>mcxspear_mag_02</modelName>
+			<txdName>mcxspear2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_01</modelName>
+			<txdName>mcxspear_ironsights</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_02</modelName>
+			<txdName>mcxspear_scope_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_03</modelName>
+			<txdName>mcxspear_scope_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_04</modelName>
+			<txdName>mcxspear_scope_09</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_05</modelName>
+			<txdName>mcxspear_scope_02</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_06</modelName>
+			<txdName>mcxspear_scope_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_07</modelName>
+			<txdName>mcxspear_scope_02</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_08</modelName>
+			<txdName>mcxspear_scope_03</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_09</modelName>
+			<txdName>mcxspear_scope_03</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_10</modelName>
+			<txdName>mcxspear_scope_04</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_11</modelName>
+			<txdName>mcxspear_scope_04</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_12</modelName>
+			<txdName>mcxspear_scope_05</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_13</modelName>
+			<txdName>mcxspear_scope_05</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_14</modelName>
+			<txdName>mcxspear_scope_05</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_15</modelName>
+			<txdName>mcxspear_scope_05</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_16</modelName>
+			<txdName>mcxspear_scope_06</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_17</modelName>
+			<txdName>mcxspear_scope_07</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_18</modelName>
+			<txdName>mcxspear_scope_07</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_19</modelName>
+			<txdName>mcxspear_scope_08</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>		
+		<Item>
+			<modelName>mcxspear_scope_20</modelName>
+			<txdName>mcxspear_scope_08</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>				
+		<Item>
+			<modelName>mcxspear_stock_01</modelName>
+			<txdName>mcxspear</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_02</modelName>
+			<txdName>mcxspear2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_03</modelName>
+			<txdName>mcxspear_stocks_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_04</modelName>
+			<txdName>mcxspear_stocks_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_05</modelName>
+			<txdName>mcxspear_stocks_02</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_06</modelName>
+			<txdName>mcxspear_stocks_02</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_07</modelName>
+			<txdName>mcxspear_stocks_03</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_08</modelName>
+			<txdName>mcxspear_stocks_03</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_09</modelName>
+			<txdName>mcxspear_stocks_04</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>	
+		<Item>
+			<modelName>mcxspear_stock_10</modelName>
+			<txdName>mcxspear_stocks_04</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="75"/>
+		</Item>			
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

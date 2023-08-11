@@ -1,0 +1,127 @@
+{
+  "modal": {
+    "save": {
+      "title": "儲存",
+      "description": "你將成功變更"
+    },
+    "exit": {
+      "title": "離開",
+      "description": "不會儲存任何變更"
+    },
+    "accept": "是",
+    "decline": "否"
+  },
+  "ped": {
+    "title": "角色",
+    "model": "模組"
+  },
+  "headBlend": {
+    "title": "遺傳",
+    "shape": {
+      "title": "臉部",
+      "firstOption": "父親",
+      "secondOption": "母親",
+      "mix": "相似"
+    },
+    "skin": {
+      "title": "造型",
+      "firstOption": "父親",
+      "secondOption": "母親",
+      "mix": "相似"
+    }
+  },
+  "faceFeatures": {
+    "title": "面部特徵",
+    "nose": {
+      "title": "鼻",
+      "width": "寬度",
+      "height": "高度",
+      "size": "尺寸",
+      "boneHeight": "骨骼高度",
+      "boneTwist": "骨扭曲",
+      "peakHeight": "峰高"
+    },
+    "eyebrows": {
+      "title": "眉毛",
+      "height": "高度",
+      "depth": "深度"
+    },
+    "cheeks": {
+      "title": "臉頰",
+      "boneHeight": "骨骼高度",
+      "boneWidth": "骨寬",
+      "width": "寬度"
+    },
+    "eyesAndMouth": {
+      "title": "眼睛和嘴巴",
+      "eyesOpening": "睜眼大小",
+      "lipsThickness": "唇厚"
+    },
+    "jaw": {
+      "title": "顎",
+      "width": "寬度",
+      "size": "尺寸"
+    },
+    "chin": {
+      "title": "下巴",
+      "lowering": "高度",
+      "length": "長度",
+      "size": "尺寸",
+      "hole": "孔的大小"
+    },
+    "neck": {
+      "title": "脖子",
+      "thickness": "厚度"
+    }
+  },
+  "headOverlays": {
+    "title": "外貌",
+    "hair": {
+      "title": "頭髮",
+      "style": "風格",
+      "color": "顏色",
+      "highlight": "明顯度"
+    },
+    "opacity": "透明度",
+    "style": "風格",
+    "color": "顏色",
+    "blemishes": "瑕疵",
+    "beard": "鬍鬚",
+    "eyebrows": "眉毛",
+    "ageing": "老化",
+    "makeUp": "化妝",
+    "blush": "臉紅",
+    "complexion": "膚色",
+    "sunDamage": "陽光傷害",
+    "lipstick": "嘴唇",
+    "moleAndFreckles": "痣和雀斑",
+    "chestHair": "胸毛",
+    "bodyBlemishes": "身體瑕疵",
+    "eyeColor": "眼睛的顏色"
+  },
+  "components": {
+    "title": "服裝",
+    "drawable": "款式",
+    "texture": "材質",
+    "mask": "面具",
+    "upperBody": "手部",
+    "lowerBody": "腳",
+    "bags": "背包和降落傘",
+    "shoes": "鞋",
+    "scarfAndChains": "圍巾和鍊子",
+    "shirt": "襯衫",
+    "bodyArmor": "護甲",
+    "decals": "貼花",
+    "jackets": "外套"
+  },
+  "props": {
+    "title": "裝飾配件",
+    "drawable": "款式",
+    "texture": "材質",
+    "hats": "帽子和頭盔",
+    "glasses": "眼鏡",
+    "ear": "耳部",
+    "watches": "手錶",
+    "bracelets": "手鍊"
+  }
+}

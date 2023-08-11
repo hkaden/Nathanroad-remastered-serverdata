@@ -1,0 +1,3 @@
+-- RegisterCommand("smoke", function()
+-- 	GiveWeaponToPed(PlayerPedId(), `WEAPON_SMOK2GRENADE`, 10, false, true)
+-- end, false)

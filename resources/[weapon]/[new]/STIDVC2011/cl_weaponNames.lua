@@ -1,0 +1,1 @@
+AddTextEntry("WEAPON_2011", "STI DVC 2011")

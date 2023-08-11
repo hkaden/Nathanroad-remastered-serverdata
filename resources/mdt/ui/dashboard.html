@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDW</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <ul class="contextmenu">
+    </ul>
+    <div id="draggedItem">
+    </div>
+    <img src="" class="gallery-image-enlarged">
+    <div class="callsign-container" style="display: none">
+        <div class="callsign-inner-container" style="display: none">
+            <div class="callsign-title">Enter Callsign</div>
+            <input type="text" maxlength="5" class="callsign-input" placeholder="6969">
+            <div class="callsign-buttons">
+                <div class="callsign-cancel">Cancel</div>
+                <div class="callsign-submit">Submit</div>
+            </div>
+        </div>
+    </div>
+    <div class="dispatch-attached-units">
+        <div class="dispatch-attached-units-container">
+            <div class="dispatch-attached-units-title" data-id="0">Attached Units</div>
+            <div class="dispatch-attached-units-holder">
+            </div>
+        </div>
+    </div>
+
+    <div class="respond-calls" style="display:none;">
+        <div class="respond-calls-container" style="display:none;">
+            <div class="respond-calls-title">Call Response</div>
+            <div class="respond-calls-responses">
+            </div>
+            <textarea class="respond-calls-input" type="text" id="respondcalls" name="respondcalls" placeholder="What would you like to respond?"></textarea>
+        </div>
+    </div>
+
+    <div class="icidents-person-search">
+        <div class="icidents-person-search-container">
+            <div class="icidents-person-search-title">搜尋個人檔案</div>
+            <div class="icidents-person-search-name-title">名稱</div>
+            <div style="width: 95%; margin: auto; border-bottom: 2px solid #2C537B;"><input class="icidents-person-search-name-input"></div>
+            <div class="icidents-person-search-holder">
+            </div>
+        </div>
+    </div>
+    <div class="incidents-charges-table" style="display: none;">
+        <div class="incidents-charges-table-container">
+            <div class="incidents-charges-title-container">
+                <div class="incidents-charges-title">Charges</div>
+                <div class="incidents-charges-title-description">Uhm, according to Google... a criminal offense is a behavior that is prohibited by law and considered to violate the moral standards of society. If there is sufficient evidence to provide a realistic prospect of conviction against each
+                    suspect on each charge, a decision to charge is made.</div>
+            </div>
+            <div class="current-charges-container">
+                <div class="current-charges-inner-container">
+                    <div class="current-charges-title">Current Charges</div>
+                </div>
+                <div id="current-charges-holder">
+                    <div class="current-charges-tag">test</div>
+                </div>
+            </div>
+            <div class="offenses-search-area">
+                <input type="text" class="offenses-search" placeholder="Search for charges" id="offenses-search" name="offenses-search">
+            </div>
+            <div class="offenses-main-container"></div>
+        </div>
+    </div>
+    <div class="container-load">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="loader"></div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item">主頁</div>
+                <div class="nav-item">個人檔案</div>
+                <div class="nav-item incidents-nav-item">案件</div>
+                <div class="nav-item">報告</div>
+                <div class="nav-item bolo-nav-item">BOLOs</div>
+                <div class="nav-item dmv-nav-item">駕駛執照</div>
+                <div class="nav-item">接龍</div>
+                <div class="nav-item">系統記錄</div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item active-nav" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <div class="dispatch-comms-container">
+                    <div style="display: flex;" class="reports-search-title-holder">
+                        <div class="reports-search-title dispatch-title-ofsomesort">任務板</div>
+                        <div class="dispatch-comms-refresh">刷新</div>
+                    </div>
+                    <div class="dispatch-items"> </div>
+                    <textarea class="dispatch-input" type="text" id="dispatchmsg" name="dispatchmsg" placeholder="信息 #任務"></textarea>
+                </div>
+                <div class="reports-container" id="home-reports-container" style="display:none">
+                    <div style="display: flex;" class="reports-search-title-holder">
+                        <div class="reports-search-title">報告</div>
+                        <div class="reports-search-refresh">刷新</div>
+                    </div>
+                    <div class="reports-items">
+                    </div>
+                </div>
+                <div class="warrants-container" id="home-warrants-container">
+                    <div class="warrants-title"> <span class="fas fa-search"></span> 拘捕令</div>
+                    <div class="warrants-items">
+
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <div class="quotes-container">
+                    <div class="quote-title">今日的<span style="color: #caa95d;">職責</span></div>
+                    <div class="quote"><span class="quote-span">The DOJ is not the enemy, but is clearly not an ally</span></div>
+                </div>
+                <div class="bulletin-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="bulletin-title">公告板</div>
+                        <div class="bulletin-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="bulletin-items-continer"> </div>
+                </div>
+            </div>
+            <div class="dispatch-container">
+                <div class="dispatch-title"><span class="fas fa-search"></span> 任務資訊</div>
+                <div style="display: flex; align-items: center;">
+                    <div class="active-unit-title">值勤人員</div>
+                    <div class="active-unit-count" id="police-count">0</div>
+                    <div class="active-unit-count" id="ems-count">0</div>
+                    <div class="active-unit-count" id="doc-count">0</div>
+                    <div class="active-unit-count" id="pa-count">0</div>
+                </div>
+                <div class="active-unit-list">
+                </div>
+                <div class="calls-title">呼叫</div>
+                <div class="active-calls-list">
+                    <div class="active-calls-item">
+                        <div class="active-call-inner-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item active-nav" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="profile-container">
+                <div class="profile-title"> <span class="fas fa-search"></span> 個人檔案</div>
+                <div class="profile-search-input"><input id="profile-search-input" type="text" placeholder="搜尋..."></div>
+                <div class="profile-items">
+                </div>
+            </div>
+            <div class="manage-profile-container">
+                <div class="manage-profile-title">管理個人檔案</div>
+                <div style="display: flex;">
+                    <div class="manage-profile-editing-title">你正在編輯...</div>
+                    <div class="manage-profile-save">儲存</div>
+                </div>
+                <div class="manage-profile-info-container">
+                    <img src="img/male.png" class="manage-profile-pic" onerror="this.src='img/not-found.jpg'">
+                    <div class="manage-profile-info-inner-container">
+                        <div class="manage-profile-citizenid">市民 ID</div>
+                        <div><span class="fas fa-address-card manage-cid-pic"></span><input type="text" readonly class="manage-profile-citizenid-input"></div>
+                        <div class="line"></div>
+                        <div class="manage-profile-name">名稱</div>
+                        <div><span class="fas fa-user manage-cid-pic"></span><input type="text" readonly class="manage-profile-name-input manage-profile-name-input-1"></div>
+                        <div class="line"></div>
+                        <div class="manage-profile-name">別名</div>
+                        <div><span class="fas fa-user manage-cid-pic"></span><input type="text" readonly class="manage-profile-name-input manage-profile-name-input-2"></div>
+                        <div class="line"></div>
+                        <div class="manage-profile-dob">DOB</div>
+                        <div><span class="far fa-calendar-alt manage-cid-pic"></span><input type="text" readonly class="manage-profile-dob-input"></div>
+                        <div class="line"></div>
+                        <div class="manage-profile-job">職業</div>
+                        <div><span class="fas fa-briefcase manage-cid-pic"></span><input type="text" readonly class="manage-profile-job-input"></div>
+                        <div class="line"></div>
+                        <div class="manage-profile-url">頭像 URL</div>
+                        <div><span class="fas fa-images manage-cid-pic"></span><input type="text" class="manage-profile-url-input"></div>
+                        <div class="line" style="margin-bottom: 0px;"></div>
+                    </div>
+                </div>
+                <textarea class="manage-profile-info" placeholder="在這輸入市民的資料..." disabled></textarea>
+            </div>
+            <div class="manage-profile-right-container">
+                <div class="manage-profile-licenses-container">
+                    <div class="license-title">執照 <span class="licenses-amount"></span></div>
+                    <div class="licenses-holder"></div>
+                </div>
+                <div class="manage-profile-vehs-container">
+                    <div class="vehs-title">載具</div>
+                    <div class="vehs-holder"></div>
+                </div>
+                <div class="manage-profile-tags-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="tags-title">標記</div>
+                        <div class="tags-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="tags-holder"></div>
+                </div>
+
+                <div class="manage-profile-gallery-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="gallery-title">圖庫</div>
+                        <div class="gallery-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="gallery-upload-input">
+                        <input id="gallery-upload-input" placeholder="上載 URL...">
+                    </div>
+                    <div class="gallery-inner-container"></div>
+                </div>
+
+                <!-- Flakey, I need you to do the linked reports HTML/CSS for me. -->
+
+                <div class="manage-convictions-container">
+                    <div class="convictions-title">已知罪行</div>
+                    <div class="convictions-holder"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="incidents-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item active-nav" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="incidents-container">
+                <div style="display: flex;" class="reports-search-title-holder">
+                    <div class="incidents-title"> <span class="fas fa-search"></span> 案件</div>
+                    <div class="incidents-search-refresh">刷新</div>
+                </div>
+                <div class="incidents-search-input"><input id="incidents-search-input" placeholder="搜尋案件 ID...">
+                </div>
+                <div class="incidents-items">
+                </div>
+            </div>
+            <div class="manage-incidents-container">
+                <div style="display: flex;" class="manage-incidents-title-holder">
+                    <div class="manage-incidents-title">管理案件</div>
+                    <div class="manage-incidents-create"> <span class="fas fa-plus" style="margin-top: 3.5px;"></span>
+                    </div>
+                    <!-- <div class="manage-incidents-save"><span class="fas fa-save" style="margin-top: 3.5px;"></span></div> -->
+                </div>
+                <div class="manage-incidents-editing-title" data-id=0>你現正創建新的案件</div>
+                <div class="manage-incidents-title-tag">標題</div>
+                <div class="manage-incidents-title-input"><span class="fas fa-tags"></span> <input placeholder="輸入標題..." class="manage-incidents-title-input" id="manage-incidents-title-input"></div>
+                <textarea class="manage-incidents-reports-content" placeholder="案件詳細內容..."></textarea>
+                <div class="manage-incidents-tags-container">
+                    <div style="display: flex; align-items: center; width: 95%;">
+                        <div class="manage-incidents-tags-title">標記</div>
+                        <div class="manage-incidents-tags-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="manage-incidents-tags-holder">
+                    </div>
+                </div>
+                <div class="manage-incidents-officers-container">
+                    <div style="display: flex; align-items: center; width: 95%;">
+                        <div class="manage-incidents-officers-title">負責警員</div>
+                        <div class="manage-incidents-officers-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="manage-incidents-officers-holder">
+
+                    </div>
+                </div>
+                <div class="manage-incidents-civilians-container">
+                    <div style="display: flex; align-items: center; width: 95%;">
+                        <div class="manage-incidents-civilians-title">涉案人士</div>
+                        <div class="manage-incidents-civilians-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="manage-incidents-civilians-holder">
+
+                    </div>
+                </div>
+                <div class="manage-incidents-evidence-container">
+                    <div style="display: flex; align-items: center; width: 95%;">
+                        <div class="manage-incidents-evidence-title">證據</div>
+                        <div class="manage-incidents-evidence-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="incidents-upload-input"><input id="incidents-upload-input" placeholder="上載 URL...">
+                    </div>
+                    <div class="manage-incidents-evidence-holder">
+                    </div>
+                </div>
+            </div>
+            <div class="associated-incidents-container">
+                <div class="associated-incidents-title">與案件關聯</div>
+                <div class="associated-incidents-tags-container">
+                    <div style="display: flex; align-items: center; width: 95%;">
+                        <div class="associated-incidents-tags-title">涉案人士</div>
+                        <div class="associated-incidents-tags-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="associated-incidents-tags-holder">
+                    </div>
+                </div>
+                <div class="incidents-ghost-holder">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reports-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item active-nav" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="reports-container">
+
+                <div style="display: flex;" class="reports-search-title-holder">
+                    <div class="reports-search-title"> <span class="fas fa-search"></span> 報告</div>
+                    <div class="reports-search-refresh">刷新</div>
+                </div>
+                <div class="reports-search-input"><input id="reports-search-input" placeholder="搜尋報告..."> </div>
+                <div class="reports-items">
+                </div>
+            </div>
+            <div class="manage-reports-container">
+                <div style="display: flex;" class="manage-reports-title-holder">
+                    <div class="manage-reports-title">管理報告</div>
+                    <div class="manage-reports-new">新增</div>
+                    <div class="manage-reports-save">儲存</div>
+                </div>
+                <div class="manage-reports-editing-title" data-id=0>你正在創建新的報告</div>
+                <div class="manage-reports-input-tag">標題</div>
+                <div class="manage-reports-input-title">
+                    <span class="fas fa-tags"></span>
+                    <input placeholder="輸入標題..." id="reporttitle" class="manage-reports-input-title">
+                </div>
+
+                <div class="manage-reports-input-tag">類型</div>
+                <div class="manage-reports-input-type"><span class="fas fa-folder"></span> <input placeholder="輸入報告類型..." id="reporttype" class="manage-reports-input-type"></div>
+
+                <textarea class="manage-reports-reports-content" id="reportdetail" placeholder="輸入報告詳細資料..."></textarea>
+            </div>
+
+            <div class="manage-reports-right-container">
+                <div class="manage-reports-tags-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="manage-reports-title-tag">標記</div>
+                        <div class="manage-reports-tags-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="manage-reports-tags-holder"></div>
+                </div>
+                <div class="manage-reports-gallery-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="gallery-title">圖庫</div>
+                        <div class="reports-gallery-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="reports-gallery-upload-input"><input id="reports-gallery-upload-input" placeholder="上載 URL...">
+                    </div>
+                    <div class="reports-gallery-inner-container"></div>
+                </div>
+                <div class="reports-officers-tags-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="tags-title" id="reports-officers-involved-tag-title">負責警員</div>
+                        <div class="reports-officers-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="reports-officers-tags-holder"></div>
+                </div>
+                <div class="reports-civilians-tags-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="tags-title">涉案人士</div>
+                        <div class="reports-civilians-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="reports-civilians-tags-holder"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="bolos-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item active-nav" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="bolos-container">
+
+                <div style="display: flex;" class="bolos-search-title-holder">
+                    <div class="bolos-search-title"> <span class="fas fa-search"></span> Bolos</div>
+                    <div class="bolos-search-refresh">刷新</div>
+                </div>
+                <div class="bolos-search-input"><input id="bolos-search-input" placeholder="Search Bolo..."> </div>
+                <div class="bolos-items">
+                </div>
+            </div>
+            <div class="manage-bolos-container">
+                <div style="display: flex;" class="manage-bolos-title-holder">
+                    <div class="manage-bolos-title">管理Bolo</div>
+                    <div class="manage-bolos-new">新增</div>
+                    <div class="manage-bolos-save">儲存</div>
+                </div>
+                <div class="manage-bolos-editing-title" data-id=0>你正在創建新的BOLO</div>
+                <div class="manage-bolos-input-tag bolotitle-title">標題</div>
+                <div class="manage-bolos-input-title">
+                    <span class="fas fa-tags"></span>
+                    <input placeholder="輸入標題..." id="bolotitle" class="manage-bolos-input-title">
+                </div>
+
+                <div class="manage-bolos-input-tag boloplate-title">車牌</div>
+                <div class="manage-bolos-input-plate"><span class="fas fa-address-card"></span> <input placeholder="輸入車牌..." id="boloplate" class="manage-bolos-input-plate"></div>
+
+                <div class="manage-bolos-input-tag boloowner-title">擁有者</div>
+                <div class="manage-bolos-input-owner"><span class="fas fa-bookmark"></span> <input placeholder="輸入擁有者..." id="boloowner" class="manage-bolos-input-owner"></div>
+
+                <div class="manage-bolos-input-tag boloindividual-title">個體</div>
+                <div class="manage-bolos-input-individual"><span class="fas fa-user"></span> <input placeholder="輸入個體..." id="boloindividual" class="manage-bolos-input-individual"></div>
+
+                <textarea class="manage-bolos-reports-content" id="bolodetail" placeholder="Bolo詳細資料..."></textarea>
+            </div>
+
+            <div class="manage-bolos-right-container">
+                <div class="manage-bolos-tags-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="manage-bolos-title-tag">標記</div>
+                        <div class="manage-bolos-tags-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="manage-bolos-tags-holder"></div>
+                </div>
+                <div class="manage-bolos-gallery-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="gallery-title">圖庫</div>
+                        <div class="bolo-gallery-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="bolo-gallery-upload-input"><input id="bolo-gallery-upload-input" placeholder="上載 URL...">
+                    </div>
+                    <div class="bolo-gallery-inner-container"></div>
+                </div>
+                <div class="manage-officers-tags-container">
+                    <div style="display: flex; align-items: center;">
+                        <div class="tags-title">處理人員</div>
+                        <div class="officers-add-btn fas fa-plus"></div>
+                    </div>
+                    <div class="manage-officers-tags-holder"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="penalcode-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item active-nav" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="penalcode-embed">
+                <iframe class="roster-iframe" src="https://www.google.com/logos/fnbx/solitaire/standalone.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="1000px" width="1000px" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="dmv-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item active-nav" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="dmv-container">
+                <div class="dmv-search-title"> <span class="fas fa-search"></span> 載具</div>
+                <div class="dmv-search-input"><input id="dmv-search-input" placeholder="搜尋車牌..."> </div>
+                <div class="dmv-items"></div>
+            </div>
+            <div class="vehicle-information-container">
+                <div style="display: flex;" class="vehicle-information-title-holder" data-dbid=0>
+                    <div class="vehicle-information-title">載具資訊</div>
+                    <div class="vehicle-information-save">儲存</div>
+                </div>
+                <div class="vehicle-info-stuff">
+                    <img src="https://pbs.twimg.com/media/EYF7l2GXYAAuDZI?format=jpg&name=large" class="vehicle-info-image" onerror="this.src='img/not-found.jpg'">
+                    <div class="vehicle-info-inner-container">
+                        <div class="vehicle-info-plate">註冊車牌</div>
+                        <div><span class="fas fa-address-card vehicle-info-icon"></span><input type="text" readonly class="vehicle-info-plate-input"></div>
+                        <div class="vehicle-info-line"></div>
+                        <div class="vehicle-info-owner">擁有者</div>
+                        <div><span class="fas fa-bookmark vehicle-info-icon"></span><input type="text" readonly class="vehicle-info-owner-input"></div>
+                        <div class="vehicle-info-line"></div>
+                        <div class="vehicle-info-class">類型</div>
+                        <div><span class="fas fa-folder vehicle-info-icon"></span><input type="text" readonly class="vehicle-info-class-input"></div>
+                        <div class="vehicle-info-line"></div>
+                        <div class="vehicle-info-model">型號</div>
+                        <div><span class="fas fa-car vehicle-info-icon"></span><input type="text" readonly class="vehicle-info-model-input"></div>
+                        <div class="vehicle-info-line"></div>
+                        <div class="vehicle-info-imageurl">圖片 URL</div>
+                        <div><span class="fas fa-images vehicle-info-icon"></span><input type="text" class="vehicle-info-imageurl-input"></div>
+                        <div class="vehicle-info-line" style="margin-bottom: 0px;"></div>
+                    </div>
+                </div>
+                <div class="vehicle-info-tags-container">
+                    <div class="vehicle-info-tags-title">已知信息</div>
+                    <div class="vehicle-info-tags-holder">
+                        <div class="vehicle-tags">
+                            <div class="vehicle-tag red-tag">顏色</div>
+                            <div class="vehicle-tag red-tag">扣押</div>
+                            <div class="vehicle-tag red-tag">BOLO</div>
+                            <!-- <div class="vehicle-tag red-tag">Code 5</div> -->
+                            <div class="vehicle-tag red-tag">偷取</div>
+                        </div>
+                    </div>
+                </div>
+                <textarea class="vehicle-info-content" placeholder="輸入載具資料..."></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="stafflogs-page-container close-all">
+        <div class="header">
+            <img src="img/sasp_badge.png" class="badge-logo">
+            <div class="header-left">
+                <div class="header-title" style="color: #caa95d; font-weight: bold; font-size: 20px;">Nathanroad POL</div>
+                <div style="color: white; font-weight: lighter; font-size: 18px;">行動數據終端</div>
+            </div>
+            <div class="header-middle">
+                <div class="date">加載中...</div>
+                <div class="time">00:00</div>
+            </div>
+            <div class="header-right">
+                <div style="color: white; font-weight: lighter; font-size: 25px;" class="name-shit">歡迎, 加載中...
+                </div>
+                <div style="color: lightgray; font-size: 18px;"><span class="fas fa-map-pin header-pin"></span><span class="header-location"></span></div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="nav-menu">
+                <div class="nav-item" data-page=".dashboard-page-container">主頁</div>
+                <div class="nav-item" data-page=".profile-page-container">個人檔案</div>
+                <div class="nav-item incidents-nav-item" data-page=".incidents-page-container">案件</div>
+                <div class="nav-item" data-page=".reports-page-container">報告</div>
+                <div class="nav-item bolo-nav-item" data-page=".bolos-page-container">BOLOs</div>
+                <div class="nav-item dmv-nav-item" data-page=".dmv-page-container">駕駛執照</div>
+                <div class="nav-item penalcode-nav-item" data-page=".penalcode-page-container">接龍</div>
+                <div class="nav-item active-nav" data-page=".stafflogs-page-container">系統記錄</div>
+            </div>
+            <div class="stafflogs-container"></div>
+        </div>
+    </div>
+</body>
+
+</html>

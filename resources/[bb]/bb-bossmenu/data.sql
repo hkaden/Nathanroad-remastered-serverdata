@@ -1,0 +1,1 @@
+ALTER TABLE `jobs` ADD COLUMN `amount` INT(11) DEFAULT 0;

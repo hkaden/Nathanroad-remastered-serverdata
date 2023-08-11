@@ -1,0 +1,32 @@
+{
+    "018096": {
+        "reason": "Spectate",
+        "module": "clientProtection",
+        "time": "[2022-03-03] 03.11.36",
+        "name": "黎明"
+    },
+    "771530": {
+        "reason": "This player has been detected by ChocoHax AI",
+        "module": "ChocoHaxAI",
+        "name": "波波腸🧡",
+        "time": "[2022-03-09] 01.36.55"
+    },
+    "561111": {
+        "reason": "This player has been detected by ChocoHax AI",
+        "module": "ChocoHaxAI",
+        "time": "[2022-05-01] 04.54.22",
+        "name": "gamepro089"
+    },
+    "565722": {
+        "reason": "This player has been detected by ChocoHax AI",
+        "module": "ChocoHaxAI",
+        "name": "Lustucru",
+        "time": "[2022-04-24] 03.15.53"
+    },
+    "092452": {
+        "reason": "ClearPedTasksImmediately",
+        "module": "clearpedtasksimmediatelyProtection",
+        "time": "[2022-02-25] 15.14.05",
+        "name": "0410"
+    }
+}

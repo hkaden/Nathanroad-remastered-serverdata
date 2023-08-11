@@ -1,0 +1,17 @@
+{
+    "languageName": "English",
+    "languageCode": "en",
+    "author": "Kaden",
+    "messages": {
+        "seconds": "秒",
+        "second": "秒",
+        "menuTitle": "基礎Roleplay測驗",
+        "question": "問題",
+        "of": "共有",
+        "start_test": "開始測驗",
+        "welcome": "歡迎來到 <b id='server_name'></b>",
+        "warning": "注意: 一但開始測驗，即代表你已有基本Roleplay知識並了解本城市之法律及規則",
+        "test_content": "<div style='margin-left:2%;margin-top:2%'><b>{player_name}, 你好</b>,<br><br>在加入我們之前, 你必須完成一個非常簡短的基礎Rolepay測驗, 以確保你於進入城市之前已有基礎的Roleplay能力.<br>你即將會收到 <b>{max_questions} 條題目</b> 而每條題目你將會有 <b>{time} {seconds}</b> 去回答.<br>你可能會遇到一些關於法例或規則的問題，請你務必先於我們的Discord<span style='color:#ffa800;font-weight:600'>https://discord.nathanroadrp.hk/</span>閱讀相關規則及法例再開始測驗<div class='header'><hr></div><span style='font-weight:600;margin-left:5px'>測驗結束之後我該注意什麼?</span><div style='margin-left:10px'><div style='display:inline-block;position:relative;top:1px;opacity:.4;margin-right:10px'><i class='fal fa-check-circle' style='top: 0px; position: relative;'></i></div>當你順利正確回答 {percentage}% 的問題, 你即將馬上獲得白名單狀態並立即可以遊玩. 正常情況下, 白名單狀態是永久的, 你並不需要再次進行考試<br><div style='display:inline-block;position:relative;top:1px;opacity:.4;margin-right:10px'><i class='fal fa-exclamation-circle' style='top: 0px; position: relative;'></i></div>如果你未能正確回答 {percentage}% 的問題, 你將會被斷開連接並凍結, 你必需凍結時間結束之後才能再次進行下一次測驗, 請你務必在凍結時間內好好準備<br></div><br><span style='opacity: 0.4'>如果你有任何問題, 請你於Discord打開支援單</span></div>",
+        "whitelist_fail_text": "很抱歉. 你於基礎Roleplay測驗未能達到要求的分數, 請你下次好好加油 Case-ID: %s"
+    }
+}

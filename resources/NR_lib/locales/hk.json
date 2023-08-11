@@ -1,0 +1,11 @@
+{
+    "language": "ChineseT",
+    "ui": {
+        "settings": {
+            "title": "設定",
+            "language": "語言"
+        },
+        "close": "關閉",
+        "confirm": "確認"
+    }
+}

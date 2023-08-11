@@ -1,0 +1,239 @@
+:root{
+    --carhud-good:rgba(143, 201, 58);
+    --carhud-medium:rgba(255, 188, 66);
+    --carhud-bad:rgba(255, 89, 100);
+
+    --carhud-background:rgba(255, 255, 255, 0.2);
+    --carhud-icon-fill: rgba(0,0,0,0.3);
+}
+html, body{
+    height:100%;
+    width:100%;
+    background:transparent!important;
+    user-select: none;
+    overflow: hidden;
+}
+
+#dashboard{
+    width:100%;
+    position:absolute;
+    bottom:Calc(0% + 50px);
+
+    display:none;
+}
+#gaugeCluster{
+    height:200px;
+}
+#infoCluster{
+    margin-left:3rem!important;
+}
+#speed{
+    /* position:absolute; */
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+#rpm{
+    position:absolute;
+    top:50%;
+    left:calc(50% + 100px);
+    transform:translate(-50%, -50%);
+}
+#fuel{
+    position:absolute;
+    top:50%;
+    left:calc(50% - 30px);
+    transform:translate(-50%, -50%);
+}
+#fuel-wrapper{
+    z-index:2
+}
+#speed-wrapper{
+    z-index:3;
+}
+#infoCluster{
+    z-index:2;
+}
+#dragCluster{
+    z-index:2
+}
+#speedValue{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-family: 'Russo One', sans-serif;
+    color:#fff;
+}
+#speedNumberValue{
+    font-size:2rem;
+}
+#speedUnit{
+    font-size:1rem;
+}
+#rpm-wrapper{
+    z-index:2;
+}
+#rpmValue{
+    position:absolute;
+    top:50%;
+    left:calc(50% + 100px);
+    transform:translate(-50%, -50%);
+    font-family: 'Russo One', sans-serif;
+    color:#fff;
+}
+#rpmNumberValue{
+    font-size:1rem;
+}
+#rpmUnit{
+    font-size:0.825rem;
+}
+#speedFill{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+#rpmFill{
+    position:absolute;
+    top:50%;
+    left:calc(50% + 100px);
+    transform:translate(-50%, -50%);
+}
+#fuelFill{
+    position:absolute;
+    top:50%;
+    left:calc(50% - 30px);
+    transform:translate(-50%, -50%);
+}
+
+.displayIcon > svg{
+    fill:rgba(0,0,0,0.3);
+}
+.displayIcon{
+    width:48px;
+    height:48px;
+    text-align:center;
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius:50%;
+    padding:10px;
+    margin-right:10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#streetName{
+    color:#fff;
+
+    text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, .3),  
+     1px -1px 0 rgba(0, 0, 0, .3),
+     -1px 1px 0 rgba(0, 0, 0, .3),
+      1px 1px 0 rgba(0, 0, 0, .3);
+}
+#compass{
+    width:520px;
+    height:64px;
+    padding:5px;
+
+    position:relative;
+    overflow: hidden;
+}
+.compassNumber{
+    padding:8px;
+}
+.accent{
+    font-size:1.5rem;
+    padding-left:8px;
+    padding-right:8px;
+}
+#compass-wrapper{
+    position:relative;
+
+    width:400%;
+    height:64px;
+    background: url(../images/compass.png) repeat-x;
+    background-position: 1225px;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    transition:all .5s linear;
+}
+#compass-drag{
+    width:520px;
+    overflow: hidden;
+
+    position:relative;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%, -50%);
+}
+#compass-current{
+    position:relative;
+    width:520px;
+    padding:5px;
+
+    text-align: center;
+    font-size:1.25rem;
+    font-weight:300;
+
+    color:#fff;
+
+    text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, .3),  
+     1px -1px 0 rgba(0, 0, 0, .3),
+     -1px 1px 0 rgba(0, 0, 0, .3),
+      1px 1px 0 rgba(0, 0, 0, .3);
+
+    line-height: 1rem;
+}
+#compas-current-number{
+}
+#compass-current-caret > svg{
+    fill:rgba(0, 0, 0, .3);
+}
+.compass-current{
+    font-size:1rem;
+}
+#cd-carhud-settings{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+}
+#cd-settings-display-fuel{
+    border-bottom-left-radius: 0;
+}
+#cd-settings-display-rpm{
+    border-bottom-right-radius: 0;
+}
+#cd-settings-display-dashboard{
+    border-top-left-radius: 0;
+    border-top-right-radius:0;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #fff!important;
+    background-color: #6c757d!important;
+    border-color: #6c757d #6c757d #6c757d!important;
+}
+.carhud-color{
+    background-color:#555;
+    border:none;
+    padding-left:3px!important;
+    padding-right:3px!important;
+}
+.nav-link:hover{
+    border:1px solid #6c757d!important;
+}
+.ui-draggable-handle{-ms-touch-action:none;touch-action:none}
+
+#cd-carhud-settings > .card{
+    display:none;
+}
+#distanceActual{
+    background-color:rgba(255, 255, 255, 0.2);
+}

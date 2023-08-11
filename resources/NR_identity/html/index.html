@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html style="display: none">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Inter:wght@500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="interface">
+      <div class="passport">
+        <div class="passport__front-cover">
+          <div class="passport__front-cover-face">
+            <div class="passport__front-cover-content">
+              <div class="passport__cover-text">
+                <div class="passport__title">彌敦道護照</div>
+                <div class="passport__lead">Nathanroad Passport</div>
+              </div>
+              <div class="passport__instructions">
+                點擊封面開始註冊程序.
+                <div class="passport__cover-pointer-cursor"></div>
+              </div>
+              <div class="passport__cover-biometric-icon"></div>
+            </div>
+          </div>
+          <div class="passport__front-cover-face passport__front-cover-backface passport__shadow">
+            <div class="passport__secondary-page">
+              <div class="passport__guide">
+                請填寫以下 <b>所有</b> 欄位.
+                <br>
+                Field criteria:
+                <ul class="passport__list">
+                  <li>出生日期 - 有效日期介乎於 1900 至 2010</li>
+                  <li>性別 - M / F</li>
+                  <li>高度 - 厘米, 介乎於 140 至 200</li>
+                </ul>
+              </div>
+              <button class="passport__submit" type="submit" form="form">提交</button>
+            </div>
+          </div>
+        </div>
+        <div class="passport__back-cover passport__shadow">
+          <div class="passport__data-page">
+            <div class="passport__header">
+              <div class="passport__header-text">國際護照 INTERNATIONAL PASSPORT</div>
+              <div class="passport__header-biometric-icon"></div>
+            </div>
+            <form class="passport__body" id="form">
+              <div class="passport__info passport__line">
+                <div class="passport__field-group">
+                  <div class="passport__label">類型 / Type</div>
+                  <div class="passport__field">P</div>
+                </div>
+                <div class="passport__field-group passport__field-group--border-left">
+                  <div class="passport__label">國家編碼 / Country code</div>
+                  <div class="passport__field">NR</div>
+                </div>
+                <div class="passport__field-group passport__field-group--border-left">
+                  <div class="passport__label">護照號碼 / Passport no.</div>
+                  <div class="passport__field" id="passport-number">00000000</div>
+                </div>
+              </div>
+              <div class="passport__picture passport__picture--male"></div>
+              <div class="passport__line">
+                <div class="passport__field-group">
+                  <div class="passport__label">名稱 / Name</div>
+                  <input class="passport__field" id="name" type="text" placeholder="Surname" disabled>
+                </div>
+              </div>
+              <div class="passport__characteristics passport__line">
+                <div class="passport__field-group">
+                  <div class="passport__label">出生日期 / Date of birth</div>
+                  <input class="passport__field" id="birthdate" type="text" placeholder="YYYY/MM/DD">
+                </div>
+                <div class="passport__field-group passport__field-group--border-left">
+                  <div class="passport__label">性別 / Sex</div>
+                  <div class="passport__custom-select">
+                    <select class="passport__field passport__field--select" id="sex" name="sex">
+                      <option value="m">M</option>
+                      <option value="f">F</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="passport__field-group passport__field-group--border-left">
+                  <div class="passport__label">高設 (cm)</div>
+                  <input class="passport__field" id="height" type="text" placeholder="Height">
+                </div>
+              </div>
+              <div class="passport__line">
+                <div class="passport__field-group">
+                  <div class="passport__label">持有人簽名 / Holder's signature</div>
+                  <div class="passport__field passport__field--signature" id="signature"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/listener.js"></script>
+    <script src="js/interaction.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

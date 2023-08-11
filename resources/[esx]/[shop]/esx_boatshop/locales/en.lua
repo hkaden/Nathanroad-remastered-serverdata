@@ -1,0 +1,15 @@
+Locales['en'] = {
+  ['not_enough_money']    = '你沒有足夠的金錢購買',
+  ['boat_belongs']        = '這架船%s 現在屬於你的',
+  ['generic_shopitem']    = '$%s',
+  ['boat_dealer']         = '經銷商 | 船',
+  ['buy_license']         = '購買許可',
+  ['no']                  = '不',
+  ['yes']                 = '是',
+  ['boat_purchased']      = '你已購買了',
+  ['shop_menu']           = '按 ~INPUT_CONTEXT~ 打開菜單',
+  ['shop_awaiting_model'] = '車輛目前下載 & 加載請等候',
+  ['sell_menu']           = '按 ~INPUT_CONTEXT~ 賣你的%s for $%s',
+  ['license_missing']     = '你沒有許可證!',
+  ['not_yours']           = '這載具不屬於你',
+}

@@ -1,0 +1,75 @@
+Config.Language = 'en'
+
+Config.Languages = {
+    ['en'] = {
+        ["PLAY_POKER"] = "[E] - 鬥三張撲克",
+
+        ["CHAIR_OCCUPIED"] = "這張凳被佔了.",
+        ["NO_REACT"] = "你沒有回應莊家的詢問，你已棄牌了",
+        ["NO_BET_INPUT"] = "你沒有設定下注額度",
+        ["NOT_ENOUGH_CHIPS"] = "你沒有足夠的籌碼",
+        ["NOT_ENOUGH_CHIPS_NEXT"] = "你沒有足夠的籌碼進行加注",
+        ["NOT_ENOUGH_CHIPS_THIRD"] = "你不能下注太多籌碼，因為你之後會沒有籌碼繼續遊玩",
+        ["NOT_ENOUGH_CHIPS_TOPLAY"] = "你沒有足夠的籌碼!",
+        ["ALREADY_BETTED"] = "你已經下注了",
+        ["YOU_LOSE"] = "你輸了...",
+        ["DEALER_NOT_QUAL"] = "莊家沒有資格參與, 你獲得了:",
+        ["CHIPS_AGAIN"] = "取回籌碼",
+        ["PLAYER_WON"] = "你贏得手牌, 你獲得:",
+        ["PAIR_WON"] = "你贏得加注額, 你獲得:",
+
+        ["INFO_BET_INPUT"] = "下注額:",
+        ["INFO_PLAYER_CHIPS"] = "現有籌碼:",
+        ["INFO_MIN_MAX"] = "最小/最大:",
+        ["INFO_TIME"] = "時間:",
+        ["INFO_FOLD_CARDS"] = "棄牌",
+        ["INFO_PLAY_CARDS"] = "玩",
+        ["INFO_LEAVE_GAME"] = "離開遊戲",
+        ["INFO_RAISE_BET"] = "提升注額",
+        ["INFO_REDUCE_BET"] = "降低注額",
+        ["INFO_CUSTOM_BET"] = "自訂注額",
+        ["INFO_PLACE_BET"] = "下注",
+        ["INFO_PLACE_PAIR_BET"] = "加注",
+
+        ["CLEARING_TABLE"] = "正在清理檯面，遊戲即將開始...",
+        ["DEALER_SHOWING_HAND"] = "莊家正在出示手牌...",
+        ["PLAYERS_SHOWING_HAND"] = "揭示玩家的手牌...",
+        ["DEALING_CARDS"] = "向玩家發牌...",
+    },
+
+    ['es'] = {
+        ["PLAY_POKER"] = "[E] - Poker",
+
+        ["CHAIR_OCCUPIED"] = "Este asiento está ocupado.",
+        ["NO_REACT"] = "No respondió a la pregunta del crupier a tiempo, ha retirado la mano.",
+        ["NO_BET_INPUT"] = "No configuró un valor de apuesta",
+        ["NOT_ENOUGH_CHIPS"] = "No tienes suficientes fichas",
+        ["NOT_ENOUGH_CHIPS_NEXT"] = "No tienes suficientes fichas para apostar en el Pair Plus, porque no tendrías suficientes fichas para jugar.",
+        ["NOT_ENOUGH_CHIPS_THIRD"] = "No puedes poner esa cantidad de fichas porque no tendrías suficiente para jugar tu mano",
+        ["NOT_ENOUGH_CHIPS_TOPLAY"] = "¡No tienes suficientes fichas para jugar!",
+        ["ALREADY_BETTED"] = "Ya apostó.",
+        ["YOU_LOSE"] = "Pierdes...",
+        ["DEALER_NOT_QUAL"] = "El crupier no se clasificó para el juego, tu obtuviste:",
+        ["CHIPS_AGAIN"] = "chips de vuelta",
+        ["PLAYER_WON"] = "Gano tu mano y recibes:",
+        ["PAIR_WON"] = "Ganó la apuesta Pair Plus, recibe:",
+
+        ["INFO_BET_INPUT"] = "APUESTA:",
+        ["INFO_PLAYER_CHIPS"] = "FICHAS:",
+        ["INFO_MIN_MAX"] = "MIN/MAX:",
+        ["INFO_TIME"] = "TIEMPO:",
+        ["INFO_FOLD_CARDS"] = "Doblar",
+        ["INFO_PLAY_CARDS"] = "Reproducir",
+        ["INFO_LEAVE_GAME"] = "Salir del juego",
+        ["INFO_RAISE_BET"] = "Aumentar apuesta",
+        ["INFO_REDUCE_BET"] = "Reducir apuesta",
+        ["INFO_CUSTOM_BET"] = "Apuesta personalizada",
+        ["INFO_PLACE_BET"] = "Hacer apuesta",
+        ["INFO_PLACE_PAIR_BET"] = "Realizar apuesta par más",
+
+        ["CLEARING_TABLE"] = "Limpiando la mesa, el próximo juego comenzará pronto...",
+        ["DEALER_SHOWING_HAND"] = "El crupier muestra su mano...",
+        ["PLAYERS_SHOWING_HAND"] = "Revelando las manos del jugador...",
+        ["DEALING_CARDS"] = "Repartiendo cartas a los jugadores...",
+	}
+}

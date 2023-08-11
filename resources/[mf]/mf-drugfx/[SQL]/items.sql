@@ -1,0 +1,12 @@
+INSERT INTO `items` (`name`, `label`) VALUES ('heroin',         "Heroin");
+INSERT INTO `items` (`name`, `label`) VALUES ('meth',           "Meth");
+INSERT INTO `items` (`name`, `label`) VALUES ('crack_cocaine',  "Crack Cocaine");
+INSERT INTO `items` (`name`, `label`) VALUES ('morphine',       "Morphine");
+INSERT INTO `items` (`name`, `label`) VALUES ('wine',           "Wine");
+INSERT INTO `items` (`name`, `label`) VALUES ('mushroom',       "Mushroom");
+INSERT INTO `items` (`name`, `label`) VALUES ('beer',           "Beer");
+INSERT INTO `items` (`name`, `label`) VALUES ('whiskey',        "Whiskey");
+INSERT INTO `items` (`name`, `label`) VALUES ('adrenaline',     "Adrenaline");
+INSERT INTO `items` (`name`, `label`) VALUES ('cocaine',        "Cocaine");
+INSERT INTO `items` (`name`, `label`) VALUES ('acid',           "Acid");
+INSERT INTO `items` (`name`, `label`) VALUES ('weed',           "Weed");

@@ -1,0 +1,16 @@
+INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES
+('cokebrick', '可卡因磚 (100G)', 20, 0, 1),
+('methbrick', '冰毒磚 (100G)', 20, 0, 1),
+('weedbrick', '大麻磚 (200G)', 25, 0, 1),
+('coke10g', '可卡因 (10G)', 50, 0, 1),
+('meth10g', '冰毒 (10G)', 50, 0, 1),
+('weed20g', '大麻 (20G)', 100, 0, 1),
+('coke1g', '可卡因 (1G)', 50, 0, 1),
+('meth1g', '冰毒 (1G)', 50, 0, 1),
+('weed4g', '大麻 (4G)', 200, 0, 1),
+('joint2g', '大麻煙捲 (2G)', 50, 0, 1),
+('drugbags', '藥袋', 80, 0, 1),
+('hqscale', '優質檢驗器', 1, 0, 1),
+('rolpaper', '捲紙', 80, 0, 1),
+('drugItem', 'Black USB-C', 2, 0, 1),
+('hackerDevice', '黑客設備', 25, 0, 1);

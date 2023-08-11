@@ -1,0 +1,915 @@
+-- ---@type table?
+-- DoorsList = {
+-- 	-- Cardealer
+-- 	-- Main Double door
+-- 	{
+-- 		doors = {
+-- 			{objName = 1578909130, objCoords = vector3(-37.326, -1108.847, 26.71542)},
+-- 			{objName = 622702232, objCoords = vector3(-39.11296, -1108.196, 26.71542)}
+-- 		},
+-- 		pickable = false,
+-- 		textCoords = vector3(-37.326, -1108.847, 26.71542),
+-- 		authorizedJobs = { 'cardealer', 'offcardealer' },
+-- 		distance = 2.5,
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Back Garage Door
+-- 	{
+-- 		pickable = false,
+-- 		textCoords = vector3(-29.34059, -1086.678, 26.99049),
+-- 		objCoords = vector3(-29.34059, -1086.678, 26.99049),
+-- 		objName = -839756739,
+-- 		authorizedJobs = { 'cardealer', 'offcardealer' },
+-- 		distance = 6.0,
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	{
+-- 		authorizedJobs = { 'mechanic', 'offmechanic' },
+-- 		locked = true,
+-- 		distance = 6.0,
+-- 		textCoords = vector3(-685.2995, -756.422, 27.87688),
+-- 		objName = -1363620215,
+-- 		pickable = false,
+-- 		objCoords = vector3(-685.2995, -756.422, 27.87688),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+	
+-- 	-- b
+-- 	{
+-- 		objName = -1363620215,
+-- 		pickable = false,
+-- 		authorizedJobs = { 'mechanic', 'offmechanic' },
+-- 		objCoords = vector3(-696.5759, -756.422, 27.93338),
+-- 		textCoords = vector3(-696.5759, -756.422, 27.93338),
+-- 		distance = 6.0,
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+	
+-- 	-- c
+-- 	{
+-- 		doors = {
+-- 			{objName = -863554740, objCoords = vector3(-669.531, -797.0487, 25.37136)},
+-- 			{objName = 671246913, objCoords = vector3(-669.531, -794.7117, 25.37136)}
+-- 	},
+-- 		pickable = false,
+-- 		authorizedJobs = { 'mechanic', 'offmechanic' },
+-- 		textCoords = vector3(-669.531, -797.0487, 25.37136),
+-- 		distance = 6.0,
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+	
+-- 	-- d
+-- 	{
+-- 		doors = {
+-- 			{objName = 671246913, objCoords = vector3(-712.6464, -797.0433, 25.35814)},
+-- 			{objName = -863554740, objCoords = vector3(-712.6464, -794.6992, 25.35814)}
+-- 	},
+-- 		pickable = false,
+-- 		authorizedJobs = { 'mechanic', 'offmechanic' },
+-- 		textCoords = vector3(-712.6464, -797.0433, 25.35814),
+-- 		distance = 6.0,
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+-- 	-- Realestateagent
+-- 	-- Office door 1
+-- 	{
+-- 		locked = true,
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		authorizedJobs = { 'realestateagent', 'offrealestateagent' },
+-- 		textCoords = vector3(-227.2003, -775.6804, 34.25924),
+-- 		doors = {
+-- 			{objName = 1773851529, objCoords = vector3(-227.2003, -775.6804, 34.25924)},
+-- 			{objName = 1773851529, objCoords = vector3(-226.2974, -773.2159, 34.25924)}
+-- 	},
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Burger shot
+-- 	-- Main door 1
+-- 	{
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		doors = {
+-- 			{objName = -806752263, objCoords = vector3(-1184.722, -883.4993, 14.1698)},
+-- 			{objName = 386432549, objCoords = vector3(-1183.275, -885.6295, 14.1698)}
+-- 	},
+-- 		authorizedJobs = { 'burgershot', 'offburgershot' },
+-- 		locked = false,
+-- 		textCoords = vector3(-1184.32, -884.4993, 14.1698),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Main door 2
+-- 	{
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		doors = {
+-- 			{objName = -806752263, objCoords = vector3(-1198.885, -885.024, 14.1698)},
+-- 			{objName = 386432549, objCoords = vector3(-1196.755, -883.577, 14.1698)}
+-- 	},
+-- 		authorizedJobs = { 'burgershot', 'offburgershot' },
+-- 		locked = false,
+-- 		textCoords = vector3(-1197.89, -884.36, 14.1698),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Chef door 1
+-- 	{
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		doors = {
+-- 			{objName = 1980817304, objCoords = vector3(-1202.487, -896.6489, 14.12363)},
+-- 			{objName = 1980817304, objCoords = vector3(-1204.188, -897.8046, 14.12363)}
+-- 	},
+-- 		authorizedJobs = { 'burgershot', 'offburgershot' },
+-- 		locked = true,
+-- 		textCoords = vector3(-1203.22, -897.33, 14.12363),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Chef door 2
+-- 	{
+-- 		pickable = false,
+-- 		distance = 2.0,
+-- 		objName = 1462909834,
+-- 		objCoords = vector3(-1193.733, -900.285, 14.12363),
+-- 		authorizedJobs = { 'burgershot', 'offburgershot' },
+-- 		locked = true,
+-- 		textCoords = vector3(-1193.733, -900.285, 14.12363),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Back door
+-- 	{
+-- 		pickable = false,
+-- 		distance = 2.0,
+-- 		objName = -1635579193,
+-- 		objCoords = vector3(-1179.315, -891.4777, 13.86516),
+-- 		authorizedJobs = { 'burgershot', 'offburgershot' },
+-- 		locked = true,
+-- 		textCoords = vector3(-1179.315, -891.4777, 13.86516),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- mafia
+
+-- 	-- Mafia Franklin
+-- 	{
+-- 		authorizedJobs = { 'mafia' },
+-- 		distance = 2.0,
+-- 		locked = true,
+-- 		textCoords = vector3(7.518358, 539.5269, 176.1776),
+-- 		objCoords = vector3(7.518358, 539.5269, 176.1776),
+-- 		objName = 308207762,
+-- 		pickable = false,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Stripclub
+-- 	{
+-- 		objName = `prop_strip_door_01`, -- The object name of the door.
+-- 		objCoords  = vector3(128.50408935547, -1298.1047363281, 29.269556045532), -- Where the doors coords are (doesn't have to be precise)
+-- 		textCoords = vector3(128.50408935547, -1298.1047363281, 29.269556045532), -- Where the text displays
+-- 		authorizedJobs = {'gang'}, -- Leave blank if there isn't a specific job for the door
+-- 		authorizedOwner = {'admin'}, -- Leave blank if there isn't a specific admin for the door
+-- 		locking = false, -- Don't remove
+-- 		locked = true, -- Makes it locked when the server start
+-- 		pickable = true, -- Make it pickable with a lockpick
+-- 		distance = 2.0, -- The distance you can open the door
+-- 	},
+
+-- 	{
+-- 		objName = 1695461688,
+-- 		objCoords  = vector3(95.437728881836, -1285.1437988281, 29.278757095337),
+-- 		textCoords = vector3(95.437728881836, -1285.1437988281, 29.278757095337),
+-- 		authorizedJobs = {'gang'},
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 		locked = true,
+-- 		pickable = true,
+-- 		distance = 2.0,
+-- 	},
+
+-- 	-- { -- This is a double door
+-- 	-- 	textCoords = vector3(-1516.904296875 851.21319580078 181.59616088867),
+-- 	-- 	authorizedJobs = {},
+-- 	-- 	locking = false,
+-- 	-- 	locked = true,
+-- 	-- 	pickable = true,
+-- 	-- 	distance = 2.0,
+-- 	-- 	doors = {
+-- 	-- 		{
+-- 	-- 			objName = `prop_doormaf`, -- The name
+-- 	-- 			objCoords = vector3(-1517.3432617188, 851.23101806641, 181.59596252441), -- The coordinates to the door
+-- 	-- 		},
+-- 	-- 		{
+-- 	-- 			objName = `prop_doormaf`,
+-- 	-- 			objCoords = vector3(-1516.3651123047, 850.94250488281, 181.59620666504),
+-- 	-- 		},
+-- 	-- 	}
+-- 	-- },
+
+-- 	-- mafia main door
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = 993120320,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(-565.1712, 276.6259, 83.28626),
+-- 		textCoords = vector3(-565.1712, 276.6259, 83.28626),
+-- 		objHeading = 355.00003051758,
+-- 		authorizedJobs = { 'mafia' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- mafia staff door
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = 1289778077,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(-568.881, 281.1112, 83.12643),
+-- 		textCoords = vector3(-568.881, 281.1112, 83.12643),
+-- 		objHeading = 355.00003051758,
+-- 		authorizedJobs = { 'mafia' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- back exit door
+-- 	{
+-- 		objCoords = vector3(-561.2866, 293.5044, 87.77851),
+-- 		textCoords = vector3(-561.2866, 293.5044, 87.77851),
+-- 		pickable = true,
+-- 		distance = 2.0,
+-- 		locked = true,
+-- 		authorizedJobs = { 'mafia' },
+-- 		objName = 993120320,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- gabz_mrpd
+-- 	{
+-- 		distance = 2.0,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		pickable = true,
+-- 		objName = -96679321,
+-- 		objCoords = vector3(440.5201, -986.2335, 30.82319),
+-- 		textCoords = vector3(440.5201, -986.2335, 30.82319),
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	{
+-- 		distance = 2.0,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		pickable = true,
+-- 		objName = -1406685646,
+-- 		objCoords = vector3(440.5201, -977.6011, 30.82319),
+-- 		textCoords = vector3(440.5201, -977.6011, 30.82319),
+-- 		locked = true,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		objName = 2130672747,
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = false,
+-- 		distance = 6.0,
+-- 		objCoords = vector3(431.4119, -1000.772, 26.69661),
+-- 		textCoords = vector3(431.4119, -1000.772, 26.69661),
+-- 	},
+
+-- 	-- gabz_mrpd undergate 1
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		objName = 2130672747,
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = false,
+-- 		distance = 6.0,
+-- 		objCoords = vector3(452.3005, -1000.772, 26.69661),
+-- 		textCoords = vector3(452.3005, -1000.772, 26.69661),
+-- 	},
+
+-- 	-- gabz_mrpd parking gate
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		objName = -1868050792,
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = false,
+-- 		distance = 6.0,
+-- 		objCoords = vector3(409.78, -1020.36, 29.36),
+-- 		textCoords = vector3(410.1, -1020.25, 29.36),
+-- 	},
+
+-- 	-- gabz_mrpd parking gate 1
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		objName = -1635161509,
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = false,
+-- 		distance = 6.0,
+-- 		objCoords = vector3(409.83, -1028.59, 29.39),
+-- 		textCoords = vector3(409.83, -1028.59, 29.39),
+-- 	},
+
+-- 	-- gabz_mrpd silde door 1
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = true,
+-- 		textCoords = vector3(443.0618, -998.7462, 30.8153),
+-- 		doors = {
+-- 			{objName = -1547307588, objHeading = 180.00001525879, objCoords = vector3(443.0618, -998.7462, 30.8153)},
+-- 			{objName = -1547307588, objHeading = 0.0, objCoords = vector3(440.7392, -998.7462, 30.8153)}
+-- 		},
+-- 		distance = 2.5,
+-- 	},
+
+-- 	-- gabz_mrpd main door 1
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = true,
+-- 		textCoords = vector3(434.7444, -983.0781, 30.8153),
+-- 		doors = {
+-- 			{objName = -1547307588, objHeading = 90.017288208008, objCoords = vector3(434.7444, -983.0781, 30.8153)},
+-- 			{objName = -1547307588, objHeading = 269.98272705078, objCoords = vector3(434.7444, -980.7556, 30.8153)}
+-- 		},
+-- 		distance = 2.5,
+-- 	},
+
+-- 	-- gabz_mrpd slide door 2
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = true,
+-- 		textCoords = vector3(458.2087, -972.2543, 30.81531),
+-- 		doors = {
+-- 			{objName = -1547307588, objHeading = 180.00001525879, objCoords = vector3(458.2087, -972.2543, 30.81531)},
+-- 			{objName = -1547307588, objHeading = 0.0, objCoords = vector3(455.8862, -972.2543, 30.81531)}
+-- 		},
+-- 		distance = 2.5,
+-- 	},
+
+-- 	-- gabz_mrpd armory door 2
+-- 	{
+-- 		objName = -692649124,
+-- 		locked = true,
+-- 		locking = false,
+-- 		pickable = true,
+-- 		objCoords = vector3(479.7507, -999.629, 30.78917),
+-- 		textCoords = vector3(479.7507, -999.629, 30.78917),
+-- 		distance = 2.0,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		objHeading = 89.999977111816,
+-- 	},
+
+-- 	-- gabz_mrpd under garage door 2
+-- 	{
+-- 		objHeading = 269.79000854492,
+-- 		objCoords = vector3(464.1591, -974.6656, 26.3707),
+-- 		textCoords = vector3(464.1591, -974.6656, 26.3707),
+-- 		distance = 2.0,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objName = 1830360419,
+-- 	},
+
+-- 	-- gabz_mrpd under garage door 1
+-- 	{
+-- 		objHeading = 89.870010375977,
+-- 		objCoords = vector3(464.1566, -997.5093, 26.3707),
+-- 		textCoords = vector3(464.1566, -997.5093, 26.3707),
+-- 		distance = 2.0,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objName = 1830360419,
+-- 	},
+
+-- 	-- gabz_mrpd silding door 1
+-- 	{
+-- 		distance = 6.0,
+-- 		objName = -1603817716,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(488.8948, -1017.212, 27.14935),
+-- 		textCoords = vector3(488.8948, -1017.212, 27.14935),
+-- 		objHeading = 90.0,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd back door 1
+-- 	{
+-- 		distance = 2.5,
+-- 		pickable = true,
+-- 		textCoords = vector3(467.3686, -1014.406, 26.48382),
+-- 		doors = {
+-- 			{objName = -692649124, objHeading = 0.0, objCoords = vector3(467.3686, -1014.406, 26.48382)},
+-- 			{objName = -692649124, objHeading = 180.00001525879, objCoords = vector3(469.7743, -1014.406, 26.48382)}
+-- 		},
+-- 		locked = true,
+-- 		locking = false,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL ENTRANCE 1
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(476.6157, -1008.875, 26.48005),
+-- 		textCoords = vector3(476.6157, -1008.875, 26.48005),
+-- 		objHeading = 270.13998413086,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL ENTRANCE 2
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(481.0084, -1004.118, 26.48005),
+-- 		textCoords = vector3(481.0084, -1004.118, 26.48005),
+-- 		objHeading = 180.00001525879,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL 1
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(477.9126, -1012.189, 26.48005),
+-- 		textCoords = vector3(477.9126, -1012.189, 26.48005),
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL 2
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(480.9128, -1012.189, 26.48005),
+-- 		textCoords = vector3(480.9128, -1012.189, 26.48005),
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL 3
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(483.9127, -1012.189, 26.48005),
+-- 		textCoords = vector3(483.9127, -1012.189, 26.48005),
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL 4
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(486.9131, -1012.189, 26.48005),
+-- 		textCoords = vector3(486.9131, -1012.189, 26.48005),
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd CELL 5
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -53345114,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(484.1764, -1007.734, 26.48005),
+-- 		textCoords = vector3(484.1764, -1007.734, 26.48005),
+-- 		objHeading = 180.00001525879,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd INTERROGATION 2
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -1406685646,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(482.6703, -995.7285, 26.40548),
+-- 		textCoords = vector3(482.6703, -995.7285, 26.40548),
+-- 		objHeading = 270.00003051758,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd INTERROGATION 2
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -1406685646,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(482.6701, -987.5792, 26.40548),
+-- 		textCoords = vector3(482.6701, -987.5792, 26.40548),
+-- 		objHeading = 270.00003051758,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd OBSERVATION 2
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -1406685646,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(482.6699, -992.2991, 26.40548),
+-- 		textCoords = vector3(482.6699, -992.2991, 26.40548),
+-- 		objHeading = 270.00003051758,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd OBSERVATION 1
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -1406685646,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(482.6694, -983.9868, 26.40548),
+-- 		textCoords = vector3(482.6694, -983.9868, 26.40548),
+-- 		objHeading = 270.00003051758,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- gabz_mrpd TOP ROOF
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = -692649124,
+-- 		pickable = true,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(464.3086, -984.5284, 43.77124),
+-- 		textCoords = vector3(464.3086, -984.5284, 43.77124),
+-- 		objHeading = 89.999977111816,
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- -- WZPD Lobby Open office 1
+-- 	{
+-- 		doors = {
+-- 			{objName = 171967175, objCoords = vector3(-585.5293, -926.4283, 24.03932)},
+-- 			{objName = -2008645938, objCoords = vector3(-585.5293, -923.8243, 24.03932)}
+-- 	},
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		locked = true,
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		textCoords = vector3(-585.5293, -926.4283, 24.03932),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- WZPD Lobby Open office 2
+-- 	{
+-- 		doors = {
+-- 			{objName = 171967175, objCoords = vector3(-585.5293, -936.6871, 24.03932)},
+-- 			{objName = -2008645938, objCoords = vector3(-585.5293, -934.083, 24.03932)}
+-- 	},
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		locked = true,
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		textCoords = vector3(-585.5293, -936.6871, 24.03932),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- -- WZPD Lobby Open office 3
+-- 	{
+-- 		doors = {
+-- 			{objName = 171967175, objCoords = vector3(-585.5226, -938.5253, 28.87668)},
+-- 			{objName = -2008645938, objCoords = vector3(-585.5226, -935.9187, 28.87668)}
+-- 	},
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		locked = true,
+-- 		distance = 2.5,
+-- 		pickable = false,
+-- 		textCoords = vector3(-585.5226, -938.5253, 28.87668),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+-- 	-- WZPD INTERROGATION 1
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		textCoords = vector3(-570.8284, -946.5832, 19.20569),
+-- 		objCoords = vector3(-570.8284, -946.5832, 19.20569),
+-- 		pickable = false,
+-- 		objName = 171967175,
+-- 		locked = true,
+-- 		distance = 2.0,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- WZPD INTERROGATION 2
+-- 	{
+-- 		authorizedJobs = { 'police', 'offpolice' },
+-- 		textCoords = vector3(-563.0447, -943.6946, 19.2042),
+-- 		objCoords = vector3(-563.0447, -943.6946, 19.2042),
+-- 		pickable = false,
+-- 		objName = -2008645938,
+-- 		locked = true,
+-- 		distance = 2.0,
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+
+-- 	-- Mechanic main gate
+-- 	-- {
+-- 	-- 	distance = 6.0,
+-- 	-- 	objName = -1551033277,
+-- 	-- 	pickable = false,
+-- 	-- 	locked = true,
+-- 	-- 	locking = false,
+-- 	-- 	objCoords = vector3(823.6608, -993.1633, 27.91413),
+-- 	-- 	textCoords = vector3(823.6608, -993.1633, 27.91413),
+-- 	-- 	authorizedJobs = { 'mechanic', 'offmechanic' },
+-- 	-- 	authorizedOwner = {'admin'},
+-- 	-- },
+
+-- 	-- Cardealer main gate
+-- 	-- {
+-- 	-- 	distance = 6.0,
+-- 	-- 	objName = 1010499530,
+-- 	-- 	pickable = false,
+-- 	-- 	locked = true,
+-- 	-- 	locking = false,
+-- 	-- 	objCoords = vector3(-21.51159, -1089.399, 28.11345),
+-- 	-- 	textCoords = vector3(-21.51159, -1089.399, 28.11345),
+-- 	-- 	objHeading = 159.99942016602,
+-- 	-- 	authorizedJobs = { 'cardealer', 'offcardealer' },
+-- 	-- 	authorizedOwner = {'admin'},
+-- 	-- },
+
+-- 	-- -- Cardealer main door
+-- 	-- {
+-- 	-- 	distance = 2.0,
+-- 	-- 	objName = 1973010099,
+-- 	-- 	pickable = false,
+-- 	-- 	locked = true,
+-- 	-- 	locking = false,
+-- 	-- 	objCoords = vector3(-48.1282, -1103.5, 27.61301),
+-- 	-- 	textCoords = vector3(-48.1282, -1103.5, 27.61301),
+-- 	-- 	objHeading = 339.99945068359,
+-- 	-- 	authorizedJobs = { 'cardealer', 'offcardealer' },
+-- 	-- 	authorizedOwner = {'admin'},
+-- 	-- },
+
+-- 	-- hospital staff door
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = 854291622,
+-- 		pickable = false,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(309.1337, -597.7515, 43.43391),
+-- 		textCoords = vector3(309.1337, -597.7515, 43.43391),
+-- 		authorizedJobs = { 'ambulance', 'offambulance' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	-- hospital reception door
+-- 	{
+-- 		distance = 2.0,
+-- 		objName = 854291622,
+-- 		pickable = false,
+-- 		locked = true,
+-- 		locking = false,
+-- 		objCoords = vector3(313.4801, -595.4583, 43.43391),
+-- 		textCoords = vector3(313.4801, -595.4583, 43.43391),
+-- 		authorizedJobs = { 'ambulance', 'offambulance' },
+-- 		authorizedOwner = {'admin'},
+-- 	},
+
+-- 	{
+-- 		distance = 6.0,
+-- 		objCoords = vector3(337.2777, -564.432, 29.77529),
+-- 		objName = -820650556,
+-- 		authorizedJobs = { 'ambulance', 'offambulance' },
+-- 		pickable = false,
+-- 		locked = true,
+-- 		textCoords = vector3(337.2777, -564.432, 29.77529),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+	
+-- 	-- 
+-- 	{
+-- 		distance = 6.0,
+-- 		objCoords = vector3(330.1349, -561.8331, 29.77529),
+-- 		objName = -820650556,
+-- 		authorizedJobs = { 'ambulance', 'offambulance' },
+-- 		pickable = false,
+-- 		locked = true,
+-- 		textCoords = vector3(330.1349, -561.8331, 29.77529),
+-- 		authorizedOwner = {'admin'},
+-- 		locking = false,
+-- 	},
+-- }
+
+-- MySQL.ready(function()
+-- 	local files = {}
+-- 	local system = os.getenv('OS')
+-- 	local command = system and system:match('Windows') and 'dir "' or 'ls "'
+-- 	local path = GetResourcePath(cache.resource)
+-- 	local types = path:gsub('//', '/') .. '/convert'
+-- 	local suffix = command == 'dir "' and '/" /b' or '/"'
+-- 	local dir = io.popen(command .. types .. suffix)
+
+-- 	if dir then
+-- 		for line in dir:lines() do
+-- 			local file = line:gsub('%.lua', '')
+
+-- 			if file and file ~= 'main' then
+-- 				files[#files+1] = file
+-- 			end
+-- 		end
+-- 		dir:close()
+-- 	end
+
+-- 	if #files > 0 then
+-- 		for i = 1, #files do
+-- 			local fileName = files[i]
+-- 			local file = LoadResourceFile('NR_Doorlock', ('convert/%s.lua'):format(fileName))
+
+-- 			if file then
+-- 				load(file)()
+
+-- 				if next(DoorsList) then
+-- 					local size = 0
+-- 					local query = 'INSERT INTO ox_doorlock (name, data) VALUES (?, ?)'
+-- 					local queries = {}
+
+-- 					for k, door in pairs(DoorsList) do
+-- 						size += 1
+-- 						local double = door.doors
+-- 						local qb = door.objName or (double and double[1].objName)
+-- 						print(qb, door.objName, (double and double[1].objName))
+-- 						if qb then
+-- 							print('qb 832')
+-- 							if double then
+-- 								for j = 1, 2 do
+-- 									double[j].objHash = double[j].objName
+-- 									double[j].objHeading = double[j].objYaw or 0
+-- 								end
+-- 							else
+-- 								door.objHash = door.objName
+-- 								door.objHeading = door.objYaw or 0
+-- 							end
+
+-- 							local groups = {}
+
+-- 							if door.authorizedJobs then
+-- 								for grade, gang in pairs(door.authorizedJobs) do
+-- 									print(gang, grade, 'gang, grade')
+-- 									groups[gang] = grade
+-- 								end
+-- 							end
+
+-- 							door.authorizedJobs = groups
+-- 							door.lockpick = door.pickable
+-- 							door.showNUI = not door.hideLabel
+-- 						end
+
+-- 						local data = {
+-- 							auto = door.slides or door.garage,
+-- 							autolock = door.autolock and door.autolock / 1000,
+-- 							coords = door.objCoords,
+-- 							heading = door.objHeading and math.floor(door.objHeading + 0.5),
+-- 							model = door.objHash,
+-- 							groups = door.authorizedJobs,
+-- 							items = door.items,
+-- 							lockpick = door.lockpick or door.pickable,
+-- 							hideUi = door.showNUI ~= nil and not door.showNUI or false,
+-- 							lockSound = door.audioLock?.file and door.audioLock.file:gsub('%.ogg', ''),
+-- 							unlockSound = door.audioUnlock?.file and door.audioUnlock.file:gsub('%.ogg', ''),
+-- 							maxDistance = door.maxDistance or door.distance,
+-- 							doorRate = door.doorRate,
+-- 							state = door.locked and 1 or 0,
+-- 							passcode = door.passcode,
+-- 							doors = double and {
+-- 								{
+-- 									coords = double[1].objCoords,
+-- 									heading = math.floor(double[1].objHeading + 0.5),
+-- 									model = double[1].objHash,
+-- 								},
+-- 								{
+-- 									coords = double[2].objCoords,
+-- 									heading = math.floor(double[2].objHeading + 0.5),
+-- 									model = double[2].objHash,
+-- 								},
+-- 							},
+-- 						}
+
+-- 						if data.auto and not data.lockSound then
+-- 							if door.audioRemote then
+-- 								data.lockSound = 'button-remote'
+-- 							end
+-- 						end
+
+-- 						if double and not data.coords then
+-- 							double = data.doors
+-- 							data.coords = double[1].coords - ((double[1].coords - double[2].coords) / 2)
+-- 						end
+
+-- 						queries[size] = {
+-- 							query = query, values = { ('%s %s'):format(fileName, k), json.encode(data) }
+-- 						}
+-- 					end
+
+-- 					table.wipe(DoorsList)
+
+-- 					if MySQL.transaction.await(queries) then
+-- 						print(('Converted %s doors from %s.lua'):format(size, fileName))
+-- 						SaveResourceFile('NR_Doorlock', ('convert/%s.lua'):format(fileName), '', -1)
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+
+-- 	DoorsList = nil
+-- end)

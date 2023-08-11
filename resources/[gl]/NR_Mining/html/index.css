@@ -1,0 +1,37 @@
+body {
+    background: none !important;
+
+}
+
+#container {
+    font-size: 20px;
+    padding: 25px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #212121;
+    height: 310px;
+    width: 500px;
+    border: 0px solid #081f15;
+    border-radius: 7px;
+    background: rgba(44, 1, 37, 0.0);
+
+}
+
+
+
+button {
+    background-color: #426b59;
+    padding: 12px;
+    color: #FFFFFF;
+
+}
+
+input {
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		
+	    <!-- WEAPON BAT -->
+		
+		<Item>
+		  <modelName>w_me_COWHAMMER</modelName>
+		  <txdName>w_me_COWHAMMER</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="50"/>
+		</Item>
+		
+		<Item>
+		  <modelName>w_me_JOKER</modelName>
+		  <txdName>w_me_JOKER</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="50"/>
+		</Item>
+
+		<!-- WEAPON GOLF -->
+	
+	
+		
+		<Item>
+		  <modelName>w_me_TOWERSENTINEL</modelName>
+		  <txdName>w_me_TOWERSENTINEL</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="50"/>
+		</Item>
+		
+		<Item>
+		  <modelName>w_me_CATBURGLAR</modelName>
+		  <txdName>w_me_CATBURGLAR</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="50"/>
+		</Item>
+		
+	
+
+		
+
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

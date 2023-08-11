@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <style type="text/css">
+    :root {
+      --border-white-faded: rgba(255,255,255,0.2);
+      --border-white-normal: rgba(255,255,255,0.7);
+
+      --text-white-faded: rgba(255,255,255,0.5);
+      --text-white-normal: #94a1b2;
+      --text-white-opaque: rgba(255,255,254,1);
+
+      --background-normal: #16161a;
+
+      --icon-blue-dark: rgba(92,141,240,0.6);
+      --icon-blue-faded: rgba(92,141,240,0.8);
+      --icon-blue-normal: rgba(92,141,240,1);
+
+      --icon-bg-faded: rgba(30,32,34,1);
+      --icon-bg-normal: rgba(42,44,48,1);
+    }
+
+    * {
+      color: white;
+      user-select: none;
+      font-family: Arial;
+    }
+
+    html,body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    /* CONTAINER */
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+
+      transform: translate(-50%,-50%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+
+      background-color: var(--background-normal);
+
+      border-radius: 10px;
+    }
+
+    /* HEADER */
+
+    .header {
+      padding: 20px 40px;
+      color: var(--text-white-faded);
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    /* CONTENT */
+
+    .content {
+      position: relative;
+      width: auto;
+      padding: 20px 30px;
+      min-width: 300px;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* CONTENT CHECKBOX */
+
+    .content > .checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .content > .checkbox > span {      
+      color: var(--text-white-faded);
+    }
+
+    /* CONTENT INPUT */
+
+    .content > .input {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .content > .input > label {
+      color: var(--text-white-faded);
+    }
+
+    .content > .input > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: stretch;
+      gap: 5px;
+      border-bottom: 2px solid var(--border-white-faded);
+      color: var(--text-white-faded);
+    }
+
+    .content > .input > div > span {
+      color: var(--text-white-faded);
+      font-size: 14px;
+    }
+
+    .content > .input > div > input {
+      position: relative;
+      width: auto;
+      flex-grow: 1;
+      margin: 0;
+      padding: 5px 0;
+      outline: none;
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-family: Arial;
+    }
+
+    .content > .financeable {
+      display: block;
+    }
+
+    /* BUTTONS */
+
+    .buttons {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .buttons > .text-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      text-align: center;
+      padding: 15px 0;
+      background: var(--icon-bg-faded);
+      color: var(--text-white-faded);
+    }
+
+    .buttons > .text-button:hover {
+      cursor: pointer;
+      background: var(--icon-bg-normal);
+      color: var(--text-white-opaque);
+    }
+
+    .buttons > .icon-button {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      text-align: center;
+      padding: 10px;     
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+      background: var(--icon-bg-faded);
+    }
+
+    .buttons > .icon-button:hover {
+      cursor: pointer;
+      background: var(--icon-bg-normal);
+    }
+
+    .buttons > .icon-button > .active {
+      color: var(--icon-blue-faded);      
+    }
+
+    .buttons > .icon-button:hover > .active {
+      color: var(--icon-blue-normal);      
+    }
+
+    .buttons > .icon-button > i {
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--text-white-faded);
+    }
+
+    .buttons > .icon-button:hover > i {
+      line-height: 30px;
+      color: var(--text-white-opaque);
+    }
+
+    .buttons > .icon-button > span {
+      color: var(--text-white-faded);
+    }
+
+    .buttons > .icon-button:hover > span {
+      color: var(--text-white-opaque);
+    }
+
+    /* INPUT EXTRAS */
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* CHECKBOX SWITCH */
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 39px;
+      height: 21px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .switch > .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid var(--border-white-faded);
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .switch > .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 2px;
+      background-color: var(--text-white-faded);
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .switch > .slider.round {
+      border-radius: 34px;
+    }
+
+    .switch > .slider.round:before {
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+    }
+
+    input:focus + .slider {
+    }
+
+    input:checked + .slider:before {
+      background-color: var(--icon-blue-faded);
+      transform: translateX(18px);
+    }
+
+    /* LAND PRICE/SCUMMINESS MODIFIER */
+
+    .progressbar {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #000428;  /* fallback for old browsers */
+      background: linear-gradient(to right, var(--icon-blue-faded), var(--icon-blue-dark) 60%, var(--background-normal) 60%, var(--background-normal) 100%); 
+    }
+
+    .progressbar > span {
+      margin: 20px;
+      color: var(--text-white-faded);
+    }
+
+    #tooltip {
+      position: absolute;
+      width: 250px;
+      height: auto;
+      background-color: var(--background-normal);
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      transform: translateX(-50%);
+      box-shadow: 0px 10px 20px 5px black;
+    }
+
+    #tooltip > div {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow-wrap: break-word;
+    }
+
+    #tooltip > div:first-child {
+      margin-top: 10px;
+      color: var(--text-white-faded);
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #tooltip > div:last-child {
+      font-size: 14px;
+      margin: 10px;
+      width: calc(100% - 20px);
+      color: var(--text-white-normal);
+    }
+
+    #locksmith > .header {
+      border-radius: 10px 10px 0 0;
+      background: var(--icon-bg-faded);
+    }
+
+    .locktarget {      
+      background: var(--icon-bg-faded);
+      padding: 20px 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id='container' class='container'>
+    <div class="header" id='header'>
+      創建新房屋
+    </div> 
+
+    <div class='buttons'>
+      <div class='icon-button' id='polyzone-button'>
+        <i class='fas fa-cube'></i>
+        <span>領地範圍</span>
+      </div>
+
+      <div class='icon-button' id='shell-button'>
+        <i class='fas fa-home'></i>
+        <span>屋型</span>
+      </div>
+
+      <div class='icon-button' id='doors-button'>
+        <i class='fas fa-door-closed'></i>
+        <span>門</span>
+      </div>
+    </div>
+
+    <div class='progressbar' id='land-price'>  
+      <span>領地價值</span>
+      <span>$5000</span>
+    </div>
+
+    <div class='content'>
+      <div class='input' id='address'>
+        <div>
+          <input type='text' placeholder='123 David Terrace, Strawberry'/>
+        </div>
+        <label>地址</label>
+      </div>
+
+      <div class='input' id='price'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='45000'/>
+        </div>
+        <label>價格</label>
+      </div>
+
+      <div class='input' id='repayed'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='45000'/>
+        </div>
+        <label>Repayed</label>
+      </div>
+
+      <div class='input' id='commission'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='1200'/>
+        </div>
+        <label>佣金</label>
+      </div>
+
+      <div class='financeable input' id='min-downpayment'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='1200'/>
+        </div>
+        <label>Min Downpayment</label>
+      </div>
+
+      <div class='financeable input' id='min-repayment'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='1200'/>
+        </div>
+        <label>Min Repayment</label>
+      </div>
+
+      <div class='input' id='downpayment'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='1200'/>
+        </div>
+        <label>Downpayment</label>
+      </div>
+
+      <div class='input' id='repayment'>
+        <div>
+          <span>$</span>
+          <input type='number' placeholder='1200'/>
+        </div>
+        <label>Repayment</label>
+      </div>
+
+      <div class='checkbox' id='financeable'>
+        <span>Financeable</span>
+        <label class='switch'>
+          <input type='checkbox' onchange="ToggleFinanceable(this)">
+          <span class='slider round'></span>
+        </label>
+      </div>
+    </div>
+
+    <div class='buttons'>
+      <div class='text-button' id='done-button' style='border-radius: 0 0 0 10px;'>完成</div>
+      <div class='text-button' id='sell-player-button' style='border-radius: 0 0 0 10px;'>出售給玩家</div>
+      <div class='text-button' id='sell-sign-button'>擺設廣告牌</div>
+      <div class='text-button' id='buy-button' style='border-radius: 0 0 0 10px;'>購買</div>
+      <div class='text-button' id='buy-society-button' style='border-radius: 0 0 0 0px;'>以公款購買</div>
+      <div class='text-button' id='pay-button' style='border-radius: 0 0 0 10px;'>支付</div>
+      <div class='text-button' id='close-button' style='border-radius: 0 0 10px 0;'>關閉</div>
+    </div>
+  </div>
+
+  <div id='locksmith' class='container'>
+    <div class="header">Locksmith</div> 
+
+    <div class="content">
+    </div> 
+
+    <div class='buttons'>
+      <div class='text-button' id='add-key-button' style='border-radius: 0 0 0 10px;' onclick="AddKey()">新增鎖匙</div>
+      <div class='text-button' id='reset-locks-button' style='border-radius: 0 0 0 10px;' onclick="ResetLocks()">重置鎖匙</div>
+      <div class='text-button' id='close-locks-button' style='border-radius: 0 0 10px 0;' onclick="Close()">關閉</div>
+    </div>
+  </div>
+
+  <div id='tooltip'>
+    <div>Test</div>
+    <div>Para</div>
+  </div>
+
+  <div id="myInputContainer" style="display:none;">
+    <input id="myInput">
+  </div>
+
+  <script type="text/javascript">
+    let showLandPrice,usingDoors,maxPrice,minRepayment;
+
+    const tooltipInfo = {
+      polyzone:{
+        title:'領地範圍',
+        text:' 領地範圍用於定義領地邊界，你可以將視為房屋範圍'
+      },
+      doors:{
+        title:'Doors',
+        text:'Doors are responsible for restricting access to properties that can be accessed directly by walking through the front door. Doors can also be used for things like sliding security gates, or garage roller doors.'
+      },
+      shell:{
+        title:'屋型',
+        text:'屋型是內裝模組的名稱'
+      },
+    }
+
+    $('input[type=number]').change(function() {
+      this.value = Math.max(this.min || 0,Math.min(this.max || Number.MAX_SAFE_INTEGER,this.value))
+    })
+
+    $('.content > .input > div > input').focusin(function() {
+      $(this.parentNode.parentNode).find('label').css('color','var(--text-white-normal)')
+      $(this.parentNode).find('span').css('color','var(--text-white-normal)')
+      $(this.parentNode).css('border-bottom','2px solid var(--text-white-normal)')
+    })
+
+    $('.content > .input > div > input').focusout(function() {
+      $(this.parentNode.parentNode).find('label').css('color','var(--text-white-faded)')
+      $(this.parentNode).find('span').css('color','var(--text-white-faded)')
+      $(this.parentNode).css('border-bottom','2px solid var(--border-white-faded)')
+    })
+
+    function AddKey() {
+      let target = $('#locksmith').find('input[type=radio]:checked')
+
+      if (!target) {
+        return
+      }
+
+      SetOpacity(0)
+      $.post(`https://${GetParentResourceName()}/newKey`,JSON.stringify({houseId:target.attr('id')}))
+    }
+
+    function ResetLocks() {
+      let target = $('#locksmith').find('input[type=radio]:checked')
+
+      if (!target) {
+        return
+      }
+
+      SetOpacity(0)
+      $.post(`https://${GetParentResourceName()}/resetLocks`,JSON.stringify({houseId:target.attr('id')}))
+    }
+
+    function Close() {
+      SetOpacity(0)
+      $.post(`https://${GetParentResourceName()}/closeLocksmith`)
+    }
+
+    function ToggleFinanceable(e) {
+      $(e.parentNode.parentNode.parentNode).find('.financeable').css('display',e.checked ? 'flex' : 'none')
+    }
+
+    function SetTooltip(m,e,active) {
+      let rect = e.getBoundingClientRect()
+      let tt = $('#tooltip')
+
+      tt.css({
+        'display':'block',
+        'left':rect.left + (rect.width/2) + 'px',
+        'top':rect.top + rect.height + 5 + 'px'
+      })
+
+      tt.find('div:first-child').html(tooltipInfo[m].title)
+      tt.find('div:last-child').html(`${tooltipInfo[m].text}<br><br>狀態: ${active ? '是' : '否'}`)
+    }
+
+    function HideTooltip() {
+      $('#tooltip').css('display','none')
+    }
+
+    function OpenPanel(houseData,editMode,onEdit) {
+      $('#container').css('display','flex')
+      $('#locksmith').css('display','none')
+
+      $('input[type=checkbox]').prop("checked",false)
+      $('input[type=checkbox]').trigger("change")
+
+      for (let key in houseData.buttons) {
+        $('#' + key + '-button > i')
+        .toggleClass('active',houseData.buttons[key])
+        .parent()
+        .unbind('mouseenter')
+        .unbind('mouseleave')
+        .unbind('click')
+        .on('mouseenter',function() {
+          SetTooltip(key,this,$('#' + key + '-button > i').hasClass('active'))
+        })
+        .on('mouseleave',function() {
+          HideTooltip()
+        })
+        .click(function() {
+          if (!editMode) {
+            return
+          }
+
+          onEdit(key)
+        })
+      }
+
+      if (houseData.address) {
+        $('#address > div > input').attr('value',houseData.address)
+      }
+
+      if (houseData.landPrice) {
+        let asPct = houseData.landModifier * 100.0
+        let landPrice = $('#land-price')
+
+        landPrice.css({
+          'background':`linear-gradient(to right, var(--icon-blue-faded), var(--icon-blue-dark) ${asPct}%, var(--background-normal) ${asPct}%, var(--background-normal) 100%)`
+        })
+
+        landPrice.find('span:last-child').text(`$${houseData.landPrice}`)
+      }
+    }
+
+    function SetButtonState(key,active) {
+      SetOpacity(1)
+      $('#' + key + '-button > i').toggleClass('active',active)
+    }
+
+    function SetConfig(showLandPrice,usingDoors,maxPrice,maxCommission,minRepayment) {
+      $('#land-price').css('display',showLandPrice ? 'flex' : 'none')
+      $('#doors-button').css('display',usingDoors ? 'flex' : 'none')
+
+      $('#price').attr('max',maxPrice)
+      $('#commission').attr('max',maxCommission)
+      $('#min-repayment').attr('min',minRepayment)
+
+      $.post(`https://${GetParentResourceName()}/configured`)
+    }
+
+    function GetData(data) {
+      let res = {
+        'id':data.houseId,
+        'address':$('#address').find('input').val(),
+        'price':$('#price').find('input').val(),
+        'commission':$('#commission').find('input').val(),
+        'min-downpayment':$('#min-downpayment').find('input').val(),
+        'min-repayment':$('#min-repayment').find('input').val(),
+        'financeable':$('#financeable').find('input').is(':checked'),
+        'downpayment':$('#downpayment').find('input').val(),
+        'repayment':$('#repayment').find('input').val()
+      }
+
+      return JSON.stringify(res)
+    }
+
+    function Copy(text) {      
+      var container = document.getElementById('myInputContainer')
+      var copyText = document.getElementById("myInput")
+      container.style.display = "block"
+      copyText.value = text;
+      copyText.select();
+      document.execCommand("copy");
+      container.style.display = "none"
+    }
+
+    function CreateProperty(data) {   
+      OpenPanel(data,true,function(key) {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/set${key}`)
+      }) 
+
+      $('#header').text('創建新房屋')  
+
+      $('#address,#done-button,#close-button').css({'pointer-events':'all','display':'flex'})
+      $('#price,#commission,#min-downpayment,#min-repayment,#financeable,#downpayment,#sell-player-button,#sell-sign-button,#buy-button,#buy-society-button,#pay-button,#repayment,#repayed').css({'display':'none'})
+
+      $('#done-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/create`,GetData(data))
+      })
+
+      $('#close-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/cancelCreate`,GetData(data))
+      }) 
+
+      SetOpacity(1)
+    }
+
+    function EditProperty(data) { 
+      OpenPanel(data,true,function(key) {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/set${key}`)
+      })  
+
+      $('#header').text('編輯房屋')  
+
+      $('#address,#done-button,#close-button').css({'pointer-events':'all','display':'flex'})
+      $('#price,#commission,#min-downpayment,#min-repayment,#financeable,#downpayment,#sell-player-button,#sell-sign-button,#buy-button,#buy-society-button,#pay-button,#repayment,#repayed').css({'display':'none'})
+
+      $('#done-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/edit`,GetData(data))
+      })
+
+      $('#close-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/cancelEdit`,GetData(data))
+      }) 
+
+      SetOpacity(1)
+    }
+
+    function SellProperty(data) {  
+      $('#header').text('賣掉房屋')  
+
+      $('#address').css({'display':'flex','pointer-events':'none'})
+      $('#sell-sign-button,#sell-player-button,#close-button,#price,#min-downpayment,#min-repayment,#financeable').css({'pointer-events':'all','display':'flex'})
+      $('#commission,#buy-button,#buy-society-button,#done-button,#downpayment,#pay-button,#repayment,#repayed').css({'display':'none'})
+
+      $('#sell-sign-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/sellSign`,GetData(data))
+      })
+
+      $('#sell-player-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/sellPlayer`,GetData(data))
+      })
+
+      $('#close-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/cancelSell`,GetData(data))
+      })  
+
+      let asPct = data.landModifier * 100.0
+      let landPrice = $('#land-price')
+
+      landPrice.css({
+        'background':`linear-gradient(to right, var(--icon-blue-faded), var(--icon-blue-dark) ${asPct}%, var(--background-normal) ${asPct}%, var(--background-normal) 100%)`
+      })
+
+      landPrice.find('span:last-child').text(`$${data.landPrice}`)
+
+      OpenPanel(data,false)    
+
+      SetOpacity(1)
+    }
+
+    function BuyProperty(data,isRealtor) { 
+      SetOpacity(1)
+
+      OpenPanel(data,false)  
+
+      $('#header').text('購買房屋')  
+
+      $('#address,#price,#min-downpayment,#min-repayment').css({'display':'flex','pointer-events':'none'})
+      $('#buy-button,#close-button,#downpayment').css({'pointer-events':'all','display':'flex'})
+      $('#sell-sign-button,#financeable,#sell-player-button,#commission,#done-button,#pay-button,#repayment,#repayed').css({'display':'none'})
+
+      if (isRealtor) {
+        $('#buy-society-button').css({'pointer-events':'all','display':'flex'}).unbind('click').click(function() {
+          SetOpacity(0)
+
+          let d = JSON.parse(GetData(data))
+          d.isRealtor = true
+
+          $.post(`https://${GetParentResourceName()}/buy`,JSON.stringify(d))
+        })
+      } else {
+        $('#buy-society-button').css('display','none')
+      }
+
+      $('#buy-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/buy`,GetData(data))
+      })
+
+      $('#close-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/cancelBuy`,GetData(data))
+      })    
+
+      setTimeout(function() {
+        let asPct = data.landModifier * 100.0
+        let landPrice = $('#land-price')
+
+        landPrice.css({
+          'background':`linear-gradient(to right, var(--icon-blue-faded), var(--icon-blue-dark) ${asPct}%, var(--background-normal) ${asPct}%, var(--background-normal) 100%)`
+        })
+
+        landPrice.find('span:last-child').text(`$${data.landPrice}`)
+
+        if (data.canFinance) {
+          let downpayment = document.getElementById('downpayment')
+          let minRepayment = document.getElementById('min-repayment')
+          let minDownpayment = document.getElementById('min-downpayment')
+
+          downpayment.style.display = 'flex'
+          downpayment.style.pointerEvents = 'all' 
+          minRepayment.style.display = 'flex' 
+          minDownpayment.style.display = 'flex'
+          
+          minRepayment.querySelector('div > input').value = data.minRepayments
+          minDownpayment.querySelector('div > input').value = data.minDeposit
+
+          let dp = downpayment.querySelector('div > input')
+
+          dp.value = data.minDeposit
+          dp.min = data.minDeposit
+          dp.max = data.salePrice
+        } else {
+          let downpayment = document.getElementById('downpayment')
+          let minRepayment = document.getElementById('min-repayment')
+          let minDownpayment = document.getElementById('min-downpayment')
+
+          downpayment.style.display = 'flex'
+          downpayment.style.pointerEvents = 'none' 
+          minRepayment.style.display = 'none' 
+          minDownpayment.style.display = 'none'
+
+          downpayment.querySelector('div > input').value = data.salePrice
+        }
+
+        let price = document.getElementById('price')
+
+        price.style.display = 'flex'
+        price.querySelector('div > input').value = data.salePrice
+      },1)
+    }
+
+    function ShowMortgagePanel(data) { 
+      OpenPanel(data,false)  
+
+      $('#header').text('Repay Mortgage')  
+
+      $('#address,#price,#repayed,#min-repayment').css({'display':'flex','pointer-events':'none'})
+      $('#pay-button,#close-button,#repayment').css({'pointer-events':'all','display':'flex'})
+      $('#sell-sign-button,#financeable,#sell-player-button,#downpayment,#commission,#done-button,#min-downpayment,#buy-button,#buy-society-button').css({'display':'none'})
+
+      $('#pay-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/pay`,GetData(data))
+      })
+
+      $('#close-button').unbind('click').click(function() {
+        SetOpacity(0)
+        $.post(`https://${GetParentResourceName()}/cancelPay`,GetData(data))
+      })
+
+      let asPct = data.landModifier * 100.0
+
+      $('#land-price').css({
+        'background':`linear-gradient(to right, var(--icon-blue-faded), var(--icon-blue-dark) ${asPct}%, var(--background-normal) ${asPct}%, var(--background-normal) 100%)`
+      }).find('span:last-child').text(`$${data.landPrice}`)
+
+      $('#price').find('input').val(data.salePrice)
+      $('#repayed').find('input').val(data.repayed)
+      $('#min-repayment').find('input').val(data.minRepayments)
+
+      $('#repayment').find('input').val(data.minRepayments).unbind('change').change(function() {
+        let owed = data.salePrice - data.repayed
+        let min = Math.min(owed,data.minRepayments)
+        this.value = Math.min(owed,Math.max(this.value,min))
+      })
+
+      SetOpacity(1)
+    }
+
+    function ShowLocksmithPanel(houses) {
+      $('#container').css('display','none')
+      $('#locksmith').css('display','flex')
+      $('#locksmith > .content').html('')
+
+      houses.forEach(element => {
+        $('#locksmith > .content').append(`<div class='locktarget'><input type=radio name='target' id='${element.houseId}' value='${element.houseId}'><label for='${element.houseId}'>${element.addressLabel}</label></div>`)
+      })
+
+      SetOpacity(1)
+    }
+
+    function SetOpacity(o) {
+      document.body.style.opacity = o || 0
+    }
+
+    window.addEventListener('message',function(e) {
+      if (window[e.data.func] != undefined) {
+        window[e.data.func](...e.data.args)
+      } else {
+        console.log('function ' + e.data.func + ' does not exist')
+      }
+    })
+
+    window.addEventListener('keydown',function(e) {
+      if (e.key == 'Tab') {
+        return e.preventDefault()
+      }
+    })
+    
+/*
+    ShowLocksmithPanel([
+      {
+        houseId:'ABC:123',
+        addressLabel:'11 Grove Street'
+      },
+      {
+        houseId:'ABC:124',
+        addressLabel:'121 Grove Street'
+      }
+    ])
+
+    SetOpacity(1)
+
+    CreateProperty({
+      buttons:{
+        polyzone:true,
+        shell:false,
+        doors:false
+      }
+    })
+
+    EditProperty({
+      buttons:{
+        polyzone:true,
+        shell:false,
+        doors:false
+      }
+    })
+
+    SellProperty({
+      buttons:{
+        polyzone:true,
+        shell:false,
+        doors:false
+      }
+    })
+
+    BuyProperty({
+      buttons:{
+        polyzone:true,
+        shell:false,
+        doors:false
+      }
+    })
+
+    SetConfig(true,true,500000,50000)
+
+    OpenPanel({
+      buttons:{
+        polyzone:true,
+        shell:true,
+        doors:false
+      }
+    },true)
+
+    SetButtonState('polyzone',false)
+*/
+
+  </script>
+</body>
+</html>

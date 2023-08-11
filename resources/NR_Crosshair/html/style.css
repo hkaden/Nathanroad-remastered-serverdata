@@ -1,0 +1,272 @@
+@font-face {
+    font-family: Axis;
+    src: url(ChaletComprimeCologneSixty.ttf);
+}
+
+body{
+    font-family: Axis;
+    user-select: none;
+    padding: none;
+    margin: none;
+}
+
+.main{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 15vh;
+    height: 15vh;
+}
+
+.top{
+    position: absolute;
+    width: 1vh;
+    height: 5vh;
+    background-color: black;
+    left:50%;
+    top:0;
+    transform: translate(-50%);
+}
+
+.bottom{
+    position: absolute;
+    width: 1vh;
+    height: 5vh;
+    background-color: black;
+    left:50%;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+.left{
+    position: absolute;
+    width: 5vh;
+    height: 1vh;
+    background-color: black;
+    top:50%;
+    left:0;
+    transform: translate(0,-50%);
+}
+
+.right{
+    position: absolute;
+    width: 5vh;
+    height: 1vh;
+    background-color: black;
+    top:50%;
+    right:0;
+    transform: translate(0,-50%);
+}
+
+.dot{
+    position: absolute;
+    width: 0.1vh;
+    height: 0.1vh;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+
+.panel{
+    display: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 45vw;
+    height: max-content;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color:white;
+}
+
+.panel-heading{
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    left: 50%;
+    translate: -50%;
+    vertical-align: middle;
+    font-size: 4vh;
+}
+
+.offset-tab,.thickness-tab,.length-tab,.color-tab,.dot-tab{
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid grey;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.button-tab{
+    position: relative;
+    top: 2vh;
+}
+
+.tab-label{
+    position: absolute;
+    left:2vw;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 2.5vh;
+}
+
+.switch{
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    margin-left:2vh;;
+}
+
+.switch-heading{
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.switch-btns{
+    position: relative;
+    width: max-content;
+    display: block;
+    display: flex;
+    margin-top: 1vh;
+}
+
+.on,.off{
+    display: inline-flex;
+    background: rgb(128 128 128 / 40%);
+    width: 4vw;
+    height: 3vh;
+    font-size: 2vh;
+    justify-content: center;
+    place-items: center;
+    margin-left: 2vh;
+}
+.on{
+    margin-left: unset !important;
+}
+
+.panel-preview{
+    position: absolute;
+    top: 50%;
+    bottom: -10vh;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.panel-preview-parent{
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    top: -19vh;
+    background: url(https://cdn.discordapp.com/attachments/792354466576990259/943755851490017361/unknown.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.save-button{
+    position: relative;
+    display: inline-flex;
+    background: rgb(128 128 128 / 40%);
+    width: 4vw;
+    height: 3vh;
+    font-size: 2vh;
+    justify-content: center;
+    place-items: center;
+    right:-36vh
+}
+
+.save-button:hover{
+    opacity: 0.5;
+}
+
+input{
+    position: absolute;
+    right:1vh;
+    vertical-align: middle;
+}
+
+input[type="color"]{
+    border:none;
+    outline:none;
+    background-color:transparent;
+    width: 7vw;
+    height: 4.3vh;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+}
+  
+input:hover {
+    opacity: 1;
+}
+  
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1vh;
+    height: 1vh;
+    background: #0077ff;
+    cursor: pointer;
+}
+
+.profiles{
+    display: inline-block;
+    position: relative;
+    left: 1vh;
+    width: 15vw;
+    height: 3vh;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+select {
+    background-color: rgba(0, 0, 0, .808);
+    outline: 0;
+    width: 16vw;
+    height: 3vh;
+    color: #fff;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 2px 2px 4px 4px;
+    box-shadow: inset 0 0 10px 0 rgb(255 255 255 / 10%);
+    text-align-last: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    transition: all .2s ease-in-out;
+    background: rgb(128 128 128 / 40%);
+    border: none;
+    font-family: 'Axis';
+    font-size: 2vh;
+    text-transform: uppercase;
+}
+select:hover {
+	background-color: rgba(34, 34, 34, .808)
+}
+
+select:focus {
+	background-color: rgba(34, 34, 34, .808);
+	border: 1px solid #fff
+}
+
+select::placeholder {
+	text-align: center
+}
+
+select::-ms-expand {
+	display: none
+}
+option{  text-transform: uppercase;}

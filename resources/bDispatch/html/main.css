@@ -1,0 +1,298 @@
+/** General Selectors*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body {
+    overflow: hidden;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.container {
+  display: none;
+}
+
+.topMenu {
+  position: absolute;
+  right: 1vw;
+  width: 35vw;
+  height: auto;
+  border: 1px solid black;
+  display: table-row;
+}
+
+.person-code, .person-name {
+  display: table-cell;
+  white-space: nowrap;
+}
+
+.person-code {
+  width: 5.5vw;
+  color: white;
+  text-align: center;
+  font-size: 0.70vw;
+}
+
+.blue {
+  background-color: rgb(70, 90, 143);
+}
+
+.red {
+  background-color: rgb(108, 33, 33);
+}
+
+.person-name {
+  padding-left: 1vw;
+  width: 85%;
+  background-color: rgb(65, 63, 61);
+  color: white;
+}
+
+.dugmad {
+  margin-top: -1vh;
+  display: inline-block;
+  margin: 0.75vh;
+  width: 50%;
+}
+
+.button {
+  display: inline-block;
+  width: 5.2vw;
+  height: 40%;
+  border: 1px gray solid;
+  text-align: center;
+  font-size: 0.8vw;
+  user-select: none;
+}
+
+.button:hover, .button-context:hover {
+  background-color: rgba(120, 117, 124, 0.3);
+}
+
+.lista-poziva {
+  position: absolute;
+  right: 1vw;
+  top: 5vw;
+  width: 25vw;
+  height: 70vh;
+  border: 1px solid gray;
+  display: table-row;
+  overflow-y: auto;
+  background-color: rgb(65, 63, 61, 0.9);
+}
+
+.jedan-poziv {
+  display: block;
+  margin: 0.5vw;
+  padding: 1vw;
+  border: 1px gray solid;
+  min-height: 5vh;
+  color: rgb(172, 172, 170);
+  overflow-x: hidden;
+}
+
+.kod, .naslov-slucaja {
+  display: inline-block;
+}
+
+.kod {
+    width: 4vw;
+    text-align: center;
+    border: solid gray 1px;
+}
+
+.time {
+  position: relative;
+  top: -0.7vh;
+  left: 12.5vw;
+  font-size: 0.45vw;
+}
+
+.naslov-slucaja {
+  width: 65%;
+  font-size: 0.95vw;
+  text-align: center;
+  border-bottom: solid gray 1px;
+}
+
+.naslov-opis {
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  overflow-y: auto;
+  font-size: 0.65vw;
+}
+
+.broj-slucaj {
+  display: inline-block;
+  width: 10vw;
+  border-top: 1px solid gray;
+}
+
+.dugme-kolege-slucaj {
+  display: inline-block;
+  width: 10vw;
+  text-align: center;
+}
+
+.kolege-button {
+  float: right;
+  width: 7.5vw;
+  border: solid gray 1px;
+  padding: 1px;
+  font-size: 0.60vw;
+  user-select: none;
+}
+
+.kolege-button:hover {
+  background-color: rgba(120, 117, 124, 0.3);
+}
+
+.naslucaj-kolege {
+  display:none;
+  margin: auto;
+  margin-top: 1vh;
+  width: 90%;
+  height: 10vh;
+  border: 1px solid gray;
+  background-color: rgba(120, 117, 124, 0.3);
+  padding: 1vh;
+  font-size: 0.75vw;
+  overflow-y: auto;
+}
+
+.jedanKolega-slucaj {
+  margin: 0.5vh;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+  width: 4px;
+}
+
+::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 1px solid #555555;
+}
+
+.listakolega-naslov {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color:white;
+  border: 0.2px solid rgba(171, 172, 171, 0.51);
+  padding: 5px;
+}
+
+.listakolega {
+  position: absolute;
+  right: 1vw;
+  bottom: 1vw;
+  width: 35vw;
+  height: 15vh;
+  border: 1px solid gray;
+  display: table-row;
+  overflow-y: auto;
+  background-color: rgb(65, 63, 61, 0.9);
+}
+
+.listakolega-police, .listakolega-ambulance {
+  display: inline-block;
+  width: 50%;
+  height: 78%;
+  border: 0.2px solid rgba(171, 172, 171, 0.51);
+  border-bottom: none;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.listakolega-police {
+  float: left;
+}
+
+.listakolega-ambulance {
+  float: right;
+}
+
+#contextMenu {
+  position: absolute;
+  display: none;
+  width: 12vw;
+  border: 1px solid white;
+  background-color: rgba(88, 91, 86, 0.9);
+  text-align: center;
+  padding: 15px;
+  z-index: 101;
+}
+
+.button-context {
+  display: block;
+  width: 10vw;
+  height: 2vh;
+  border: 1px black solid;
+  text-align: center;
+  font-size: 0.7vw;
+  user-select: none;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.right-klik {
+  position: relative;
+  float: left;
+  width: 3vw;
+  height: 3vh;
+  background-image: url("img/rc.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100;
+}
+
+.pozivNotifikacija {
+  position: absolute;
+  right: 1vw;
+  top: 5vw;
+  width: 25vw;
+  height: 55vh;
+  display: table-row;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  z-index: -100;
+}
+
+.pozivNotifikacija .jedan-poziv {
+  display: none;
+  background-color: rgb(65, 63, 61, 0.9);
+  min-height: 13vh;
+  max-height: 12vh;
+}
+
+.transfered {
+  font-size: 0.5vw;
+}

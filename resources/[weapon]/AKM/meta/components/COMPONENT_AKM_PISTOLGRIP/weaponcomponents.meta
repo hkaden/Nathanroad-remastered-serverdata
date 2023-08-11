@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponComponentInfoBlob>
+	<Infos>
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_AKM_PISTOLGRIP_01</Name>
+			<Model>akmpistolgrip1</Model>
+			<LocName>"PISTOLGRIP"</LocName>
+			<LocDesc>"PISTOLGRIP"</LocDesc>
+			<AttachBone>AAPGrip_2</AttachBone>
+			<WeaponAttachBone>WAPGrip_2</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="0"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="5"/>
+			<HudRange value="0"/>
+		</Item>
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_AKM_PISTOLGRIP_02</Name>
+			<Model>akmpistolgrip2</Model>
+			<LocName>"PISTOLGRIP"</LocName>
+			<LocDesc>"PISTOLGRIP"</LocDesc>
+			<AttachBone>AAPGrip_2</AttachBone>
+			<WeaponAttachBone>WAPGrip_2</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="0"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="5"/>
+			<HudRange value="0"/>
+		</Item>
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_AKM_PISTOLGRIP_03</Name>
+			<Model>akmpistolgrip3</Model>
+			<LocName>"PISTOLGRIP"</LocName>
+			<LocDesc>"PISTOLGRIP"</LocDesc>
+			<AttachBone>AAPGrip_2</AttachBone>
+			<WeaponAttachBone>WAPGrip_2</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="0"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="5"/>
+			<HudRange value="0"/>
+		</Item>
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_AKM_PISTOLGRIP_04</Name>
+			<Model>akmpistolgrip4</Model>
+			<LocName>"PISTOLGRIP"</LocName>
+			<LocDesc>"PISTOLGRIP"</LocDesc>
+			<AttachBone>AAPGrip_2</AttachBone>
+			<WeaponAttachBone>WAPGrip_2</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="0"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="5"/>
+			<HudRange value="0"/>
+		</Item>
+		<Item type="CWeaponComponentInfo">
+			<Name>COMPONENT_AKM_PISTOLGRIP_05</Name>
+			<Model>akmpistolgrip5</Model>
+			<LocName>"PISTOLGRIP"</LocName>
+			<LocDesc>"PISTOLGRIP"</LocDesc>
+			<AttachBone>AAPGrip_2</AttachBone>
+			<WeaponAttachBone>WAPGrip_2</WeaponAttachBone>
+			<AccuracyModifier type="NULL"/>
+			<DamageModifier type="NULL"/>
+			<bShownOnWheel value="true"/>
+			<CreateObject value="true"/>
+			<HudDamage value="0"/>
+			<HudSpeed value="0"/>
+			<HudCapacity value="0"/>
+			<HudAccuracy value="5"/>
+			<HudRange value="0"/>
+		</Item>		
+	</Infos>
+	<InfoBlobName/>
+</CWeaponComponentInfoBlob>
+

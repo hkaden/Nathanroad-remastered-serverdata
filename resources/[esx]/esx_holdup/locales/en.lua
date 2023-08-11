@@ -1,0 +1,16 @@
+Locales['en'] = {
+  ['shop_robbery'] = '搶劫便利店',
+  ['press_to_rob'] = '按 [E] to rob %s',
+  ['robbery_timer'] = '搶劫: %s 剩餘的秒數',
+  ['recently_robbed'] = '這家商店最近被搶劫了 %s 請等待直到你再次搶劫',
+  ['rob_in_prog'] = '搶劫正在進行中 %s',
+  ['started_to_rob'] = '你開始搶 %s',
+  ['alarm_triggered'] = '警報已被觸發',
+  ['robbery_complete'] = '搶劫已成功, you stole $%s',
+  ['robbery_complete_at'] = '搶劫成功 %s',
+  ['robbery_cancelled'] = '搶劫已被取消!',
+  ['robbery_cancelled_at'] = '搶劫 %s 已被取消!',
+  ['min_police'] = '你的職業不能打劫/需要警察: ',
+  ['robbery_already'] = '走私/搶劫正在進行中.',
+  ['no_threat'] = '你不會對商店管理員構成威脅',
+}

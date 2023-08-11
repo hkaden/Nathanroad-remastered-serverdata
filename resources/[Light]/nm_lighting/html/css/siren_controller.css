@@ -1,0 +1,53 @@
+:root {
+	--background-colour: rgba(25, 25, 25, 0.8);
+	--accent-colour: rgba(200, 200, 200, 0.8);
+}
+
+@font-face {
+	font-family: manifold;
+	src: url('../fonts/ManifoldCF-Regular.otf');
+}
+
+#siren_controller {
+	font-family: manifold;
+	position: absolute;
+	display: none;
+	flex-wrap: nowrap;
+	background-color: var(--background-colour);
+	width: 20%;
+	right: 12%;
+	bottom: 0.5%;
+}
+
+#siren_controller .controller_button {
+	background-color: var(--accent-colour);
+	width: 20%;
+	margin: 1.5%;
+	padding: 1.5%;
+	text-align: center;
+	border: 1px solid var(--background-colour);
+	font-weight: 600;
+}
+
+@keyframes text_pulse {
+	0% { box-shadow: 0 0 2px  green; }
+	25% { box-shadow: 0 0 4px green; }
+	50% { box-shadow: 0 0 8px green; }
+	75% { box-shadow: 0 0 4px green; }
+	100% { box-shadow: 0 0 2p green; }
+}
+
+.light {
+	height: 15%;
+	width: 10%;
+	border-radius: 50%;
+	display: inline-block;
+
+	background-color: #bbb;
+	border: 0.2px solid var(--background-colour);
+}
+
+.light_active {
+	background-color: rgb(127, 255, 0);
+	animation: text_pulse 2s infinite;
+}

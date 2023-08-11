@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <style type="text/css">
+    /* doc */
+    html,body {
+      outline: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      font-family: arial;
+    }
+
+    body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    /* container */
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 150px;
+      transform: translateY(-50%);  
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+      max-height: 80%;
+    }
+
+    /* inventory */
+    .inventory {
+      height: auto;
+      padding: 15px;
+      background-color: rgb(34,34,44);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* inventory item */
+    .inventory > .item {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background: rgb(50,50,60);
+      padding: 5px;
+      text-align: right;
+      color: white;
+      background-size: 50% 50%;
+      background-position: center;
+      background-image: url('./images/some_strain.png');
+      background-repeat: no-repeat;
+      font-size: 14px;
+    }
+
+    .inventory > .item:hover {
+      background-color: rgb(70,70,80);
+      cursor: pointer;
+    }
+
+    /* info */
+    .info {    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(34,34,44);
+      border-radius: 10px;
+      padding: 30px;
+      gap: 10px;
+    }
+
+    /* ruler */
+    .hr {
+      height: 5px;
+      width: 100%;
+      border-radius: 1px;
+      background-color: rgba(120,120,120,0.0);
+    }
+
+    /* buttons */
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .buttons > div {
+      width: 50px;
+      height: 50px;
+    }
+
+    .buttons > div > a {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 50px;
+      color: rgb(200,200,200);
+      font-size: 20px;
+      background: rgb(50,50,60);
+      border-radius: 5px;
+    }
+
+    .buttons > div > a:hover {
+      color: rgb(22,135,248);
+      cursor: pointer;
+      background-color: rgb(70,70,80);
+    }
+
+    .buttons > div > .selected {
+      color: rgb(22,135,248);  
+      background-color: rgb(70,70,80);    
+    }
+
+    /* strain name */
+    .strain {
+      color: white;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* progress circle */   
+    .progress-circle {
+      width: auto;
+      height: 140px;
+    }
+
+    .progress-circle .circle{
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background: rgb(50,50,60);
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      cursor: default;
+    }
+
+    .progress-circle .circle .box,
+    .progress-circle .circle .box span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    .progress-circle .circle .box{
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0.85);
+      transition: all 0.2s;
+    }
+
+    .progress-circle .circle .box span,
+    .progress-circle .text{
+      user-select: none;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+
+    /* stat panel */
+    .stat-panel {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .stat-selector {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      color: white;
+    }
+
+    .stat-selector > div {
+      width: 40px;
+      height: 40px;
+    }
+
+    .stat-selector > div > a {
+      text-align: center;
+      line-height: 40px;
+      width: 100%;
+      color: rgb(200,200,200);
+      font-size: 14px;
+      border-radius: 5px;   
+      background: rgb(50,50,60);   
+    }
+
+    .stat-selector > div > a:hover {
+      color: rgb(22,135,248);
+      cursor: pointer;
+      background-color: rgb(70,70,80);
+    }
+
+    .stat-selector > div > .selected {
+      color: rgb(22,135,248);
+    }
+
+    /* stat modifiers */
+    .stat-modifiers-container {
+      position: relative;
+      height: 50%;
+      max-height: 50%;
+      overflow-y: auto;
+    }
+
+    .stat-modifiers {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .stat-modifiers > div {
+      color: white;
+      background-color: rgb(44,44,54);
+      padding: 15px 10px;
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: calc(100% - 40px) 40px;
+      grid-template-rows: auto;
+    }
+
+    .stat-modifiers > div > div {
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+    }
+
+    .stat-modifiers > div > .text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .stat-modifiers > div > .text > .text-info {
+      font-size:12px;
+      color:rgb(200,200,200);
+    }
+
+    .stat-modifiers > div > .value {
+      width: 100%;
+      height: 100%;
+      background: rgba(60,60,70,0.7);   
+      border-radius: 5px;
+    }
+
+    .stat-modifiers > div > .value > div {
+      position: relative;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: rgb(22,135,248);
+    }
+
+
+    /* stat container */
+    .stat-container {
+      color: white;
+      width: 100%;
+      height: auto;
+    }
+
+    .stat-container > div {
+      padding: 5px 0;
+    }
+
+    .stat-container > .label {
+      width: 100%;
+      text-align: center;
+      color: rgb(240,240,240);
+    }
+
+    .stat-container > .values {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 14px;
+      color: white;
+    }
+
+    /* stat progress bar */
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(50,50,60,1.0);
+    }
+
+    .progress-bar > .current {    
+      height: 100%;  
+      background-color: #3399ff;
+      border-radius: 4px;
+    }
+
+    /* alert */
+    #alert {
+      width: auto;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgb(34,34,44);
+      padding: 20px; 
+      border-radius: 10px;     
+      box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+      display: none;
+    }
+
+    #alert-text {
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0px 20px 0;
+    }
+
+    #alert > .buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    #alert > .buttons > div {
+      width: 100px;
+      height: 40px;
+      color: white;
+      background: rgba(50,50,60,1.0);
+      text-align: center;
+      border-radius: 5px;
+      line-height: 40px;
+    }
+
+    #alert > .buttons > div:hover {
+      background: rgb(70,70,80);
+      cursor: pointer;
+      color: rgb(22,135,248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: rgba(30,36,45,0.8);
+      border-radius: 4px;
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2); 
+      border-radius: 4px;
+    }
+     
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0,0.3); 
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <div class="strain" id="strain-name">White Widow (MALE)</div>
+
+      <div class="growth">
+        <div class="progress-circle" id="growth-progress"></div>
+      </div>
+
+      <div class="stat-panel">
+        <div class="stat-selector" id="condition-buttons">
+          <div id="stat-temp">
+            <a class='fas fa-temperature-low' onclick="DisplayCondition('temp')"></a>
+          </div>
+          <div id="stat-humid">
+            <a class='fas fa-wind' onclick="DisplayCondition('humid')"></a>
+          </div>
+          <div id="stat-light">
+            <a class='fas fa-lightbulb' onclick="DisplayCondition('light')"></a>
+          </div>
+          <div id="stat-water">
+            <a class='fas fa-tint' onclick="DisplayCondition('water')"></a>
+          </div>
+          <div id="stat-fert">
+            <a class='fas fa-cloud-meatball' onclick="DisplayCondition('fert')"></a>
+          </div>
+        </div>
+
+        <div class="stat-container">
+          <div class="label" id="stat-label">Water</div>
+          <div class="values">
+            <span id="stat-value">50%</span>
+            <span id="stat-range">100%</span>
+          </div>
+          <div>
+            <div class="progress-bar">
+              <div id="stat-progress" class="current" style='width:65%'></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-modifiers-container">
+          <div class="stat-modifiers" id="stat-modifiers">
+            <div>
+              <div class="text">
+                <div>Weather</div>
+                <div style="font-size:12px;color:rgb(200,200,200)">WEATHER_CLEAR</div>
+              </div>
+              <div class='value'>
+                <div>+25</div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>Furni</div>
+                <div style="font-size:12px;color:rgb(200,200,200)">bk_p_hydrolight_01a</div>
+              </div>
+              <div class='value'>
+                <div>+10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="buttons" id="action-buttons">
+        <div>
+          <a class='fas fa-cloud-meatball' id='fert-inventory-button' onclick="ShowInventory(this,'fert')"></a>
+        </div>
+        <div>
+          <a class='fas fa-tint' id='water-inventory-button' onclick="ShowInventory(this,'water')"></a>
+        </div>
+        <div id='harvest-plant-button' >
+          <a class='fas fa-hand-paper' onclick="HarvestPlant()"></a>
+        </div>
+        <div>
+          <a class='fas fa-trash-alt' onclick="DestroyPlant()"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="inventory" id="inventory">
+      <div class="item">5</div>
+      <div class="item" style='background-image:url("./images/weed.png");'>1</div>
+      <div class="item" style='background-image:url("./images/meth.png");'>1</div>
+      <div class="item" style='background-image:url("./images/heroin.png");'>1</div>
+      <div class="item" style='background-image:url("./images/cocaine.png");'>1</div>
+    </div>
+  </div>
+
+  <div id="alert">
+    <div id="alert-text">Testing</div>
+    <div class="buttons">
+      <div onclick="AcceptAlert()">Accept</div>
+      <div onclick="DeclineAlert()">Decline</div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    let plantData,inventoryData,alertCb,lastCondition,lastInventory;
+
+    let statModifierCont = document.querySelector('.stat-modifiers-container')
+
+    statModifierCont.style.maxHeight = Math.floor(window.innerHeight * 0.3) + "px"
+
+    class ProgressBar {
+      constructor(parentElement,gradient,label,text,value) { 
+        let size = 100
+        let circle = document.createElement('DIV')
+        let bar = document.createElement('DIV')
+        let box = document.createElement('DIV')
+
+        circle.appendChild(bar)
+        circle.appendChild(box)
+        parentElement.appendChild(circle)
+
+        bar.className = "bar"
+        circle.className = "circle"
+        box.className = "box"
+
+        circle.style.width = `${size}px`
+        circle.style.height = `${size}px`
+
+        box.innerHTML = `<span>${label}<br><div style='font-size:20px; white-space:nowrap;'>${text}</div></span>`
+
+        this.options = {
+          startAngle: -1.55,
+          size: size,
+          value: value,
+          fill: {gradient: gradient},        
+          animation: {
+            duration: 100,
+            easing: 'circleProgressEasing'
+          }
+        }
+
+        this.bar = bar
+        this.box = box
+
+        $(bar).circleProgress(this.options)
+
+        this.setValue = function(val) {
+          this.options.animationStartValue = this.options.value
+          this.options.value = val
+          $(this.bar).circleProgress(this.options)
+        }
+
+        this.setText = function(label,text) {
+          this.box.innerHTML = `<span>${label}<br><div style='font-size:20px; white-space:nowrap;'>${text}</div></span>`
+        }
+      }
+    }
+    
+    const progressRadius = new ProgressBar(growthEle = document.getElementById('growth-progress'),['#3399ff', '#0066cc'],"Growth","50%",0.5)
+    const actionButtons = document.querySelectorAll('#action-buttons > div > a')
+    const conditionButtons = document.querySelectorAll('#condition-buttons > div > a')
+    const strainName = document.getElementById('strain-name')
+    const inventory = document.getElementById('inventory')
+    const statValue = document.getElementById('stat-value')
+    const statRange = document.getElementById('stat-range')
+    const statLabel = document.getElementById('stat-label')
+    const statProgress = document.getElementById('stat-progress')
+    const statModifiers = document.getElementById('stat-modifiers')
+    const alert = document.getElementById('alert')
+    const alertText = document.getElementById('alert-text')
+
+    function RefreshActionButtons() {
+      for (let i=0;i<actionButtons.length;i++) {
+        const actionButton = actionButtons[i]
+        actionButton.classList.remove('selected')
+      }      
+    }
+
+    function RefreshConditionButtons() {      
+      for (let i=0;i<conditionButtons.length;i++) {
+        const conditionButton = conditionButtons[i]
+        conditionButton.classList.remove('selected')
+      }
+    }
+
+    function SetStrainName(name,soil) {
+      strainName.innerHTML = `${name}<br><span style="front-size:12px;">${soil}</span>`
+      //strainName.innerHTML = `${name}<br><span style="font-size:12px;">${gender == 'm' ? 'Male' : (gender == 'f' ? 'Female' : 'Unknown')}</span>`
+    }
+
+    function SetPlantGrowth(growth) {
+      progressRadius.setValue(growth / 100)
+      progressRadius.setText("Growth",Math.round(growth) + "%")
+    }
+
+    function HideInventory() {
+      inventory.style.opacity = 0 
+      lastInventory = false
+    }
+
+    function DisplayCondition(condition) {
+      lastCondition = condition
+
+      RefreshConditionButtons()
+
+      const data = plantData.stats[condition]
+
+      statLabel.textContent = (data ? data.statLabel : "")
+      statValue.textContent = (data ? data.value : "")
+      statRange.textContent = (data ? data.range : "")
+      statProgress.style.width = (data ? Math.min(100,Math.abs(data.percent % 100.0)) + "%" : "0%")
+      statModifiers.innerHTML = ''
+
+      if (!data || data.percent < 0 || data.percent > 100) {
+        statProgress.style.backgroundColor = "#ff4d4d"
+      } else {
+        statProgress.style.backgroundColor =  "#3399ff"
+      }
+
+      if (data && data.buffs) {
+        for (let i=0;i<data.buffs.length;i++) {
+          let buff = data.buffs[i]
+
+          let ele = document.createElement('div')
+
+          let text = document.createElement('div')
+          text.className = 'text'
+
+          let textLabel = document.createElement('div')
+          let textInfo = document.createElement('div')
+          textInfo.className = 'text-info'
+
+          textLabel.textContent = buff.type
+          textInfo.textContent = buff.name
+
+          text.appendChild(textLabel)
+          text.appendChild(textInfo)
+
+          let value = document.createElement('div')
+          value.className = 'value'
+          value.innerHTML = `<div>${Math.round(buff.value)}</div>`
+
+          ele.appendChild(text)
+          ele.appendChild(value)
+
+          statModifiers.appendChild(ele)
+        }
+      }
+
+      let button = document.querySelector(`#stat-${condition} > a`)
+      button.classList.add('selected')
+    } 
+
+    function ShowInventory(e,_type) {
+      lastInventory = _type
+
+      let type = _type
+      inventory.innerHTML = ''
+
+      for (let i=0;i<inventoryData[type].length;i++) {
+        let item = inventoryData[type][i]
+
+        let ele = document.createElement('div')
+        ele.className = 'item'
+        ele.style.backgroundImage = `url("./images/${item.name}.png")`
+        ele.textContent = item.count
+
+        ele.onclick = function() {
+          Alert(`Use x1 ${item.label} on this plant?`,function() {
+            $.post(`https://${GetParentResourceName()}/use`,JSON.stringify({
+              type:type,
+              itemName:item.name
+            }))
+          })
+        }
+
+        inventory.appendChild(ele)
+      }
+
+      let buttons = document.querySelectorAll('.buttons > div > a')
+      for (let i=0;i<buttons.length;i++) {
+        let button = buttons[i]
+        button.classList.remove('selected')
+      }
+
+      if (inventoryData[type].length > 0) {
+        inventory.style.opacity = 1
+      } else {
+        inventory.style.opacity = 0        
+      }
+      
+      e.classList.add('selected')
+    }
+
+    function DeclineAlert() {
+      alert.style.display = 'none'
+      alertCb = undefined
+    }
+
+    function AcceptAlert() {
+      alert.style.display = 'none'
+
+      if (!alertCb) {
+        return
+      }
+
+      alertCb()
+    }
+
+    function Alert(msg,cb) {
+      alertCb = cb
+      alert.style.display = 'block'
+      alertText.textContent = msg
+    }
+
+    function DestroyPlant() {
+      Alert('Are you sure you want to destroy this plant?',function() {
+        document.body.style.opacity = 0
+        $.post(`https://${GetParentResourceName()}/destroy`)    
+      })
+    }
+
+    function HarvestPlant() {
+      Alert('Are you sure you want to harvest this plant?',function() {
+        document.body.style.opacity = 0
+        $.post(`https://${GetParentResourceName()}/harvest`)    
+      })
+    }
+
+    function RefreshUI(data = {stats:[]}) {
+      plantData = data
+
+      RefreshActionButtons()
+      HideInventory()
+
+      SetStrainName(data.strain,data.soil)
+      SetPlantGrowth(data.growth)
+
+      DisplayCondition('temp')
+
+      if (!data.gender || data.gender == "UNKNOWN") {
+        $("#harvest-plant-button").css('display','none')
+      } else {
+        $("#harvest-plant-button").css('display','block')        
+      }
+    }
+
+    function RefreshInventory(data = {water:[],fert:[]}) {
+      inventoryData = data
+    }
+
+    window.addEventListener('message',function(e) {
+      switch (e.data.type) {
+        case 'display':
+          document.body.style.opacity = 1
+          document.body.style.pointerEvents = 'all'
+
+          RefreshInventory(e.data.inventory)
+          RefreshUI(e.data.plant)
+
+          if (e.data.openStat) {
+            let ele = document.getElementById(e.data.openStat + "-inventory-button")
+            ShowInventory(ele,e.data.openStat)
+            DisplayCondition(e.data.openStat)
+          }
+        break;
+
+        case 'sync':
+          RefreshUI(e.data.plant)
+        break;
+
+        case 'close':
+          document.body.style.opacity = 0
+          lastCondition = false
+          lastInventory = false
+        break;
+      }
+    })
+
+    window.addEventListener('keyup',function(e) {
+      if (e.key.toUpperCase() == 'ESC' || e.key.toUpperCase() == 'ESCAPE') {
+        document.body.style.opacity = 0
+        $.post(`https://${GetParentResourceName()}/closed`)
+        lastCondition = false
+        lastInventory = false
+      }
+    })
+
+    const debug = 0
+    if (debug) {
+      document.body.style.opacity = 1
+      RefreshInventory({
+        water:[
+          {
+            name:'acid',
+            count:5
+          },
+          {
+            name:'beer',
+            count:1
+          }
+        ],
+        fert:[
+          {
+            name:'morphine',
+            count:3
+          },
+          {
+            name:'meth',
+            count:2
+          },
+          {
+            name:'heroin',
+            count:1
+          }
+        ]
+      })
+
+      RefreshUI({
+        strain:'Something',
+        soil:"UNKNOWN",
+        gender:'m',
+        growth:80.0,
+        stats:{
+          temp:{
+            label:"Temperature",
+            value:"20oC",
+            range:"10-30oC",
+            percent:50,
+            buffs:[
+              {
+                type:"Weather",
+                name:"WEATHER_EXTRASUNNY",
+                value:"+40"
+              },
+              {
+                type:"Furni",
+                name:"bk_prop_aircon_01a",
+                value:"-15"
+              },
+              {
+                type:"Furni",
+                name:"bk_prop_weedfan_01a",
+                value:"-5"
+              },
+              {
+                type:"Furni",
+                name:"bk_prop_weedfan_01a",
+                value:"-5"
+              },
+              {
+                type:"Furni",
+                name:"bk_prop_weedfan_01a",
+                value:"-5"
+              },
+              {
+                type:"Furni",
+                name:"bk_prop_weedfan_01a",
+                value:"-5"
+              },
+              {
+                type:"Furni",
+                name:"bk_prop_weedfan_01a",
+                value:"-5"
+              }
+            ]
+          },
+          light:{
+            label:"Light",
+            value:"50%",
+            range:"0-75%",
+            percent:75,
+            buffs:[
+              {
+                type:"Weather",
+                name:"WEATHER_EXTRASUNNY",
+                value:"+75"
+              },
+              {
+                type:"Furni",
+                name:"bkr_prop_shade_01a",
+                value:"-25"
+              }
+            ]
+          },
+          humid:{
+            label:"Humid",
+            value:"25%",
+            range:"0-100%",
+            percent:25,
+            buffs:[]
+          },
+          water:{
+            label:"Water",
+            value:"25(+25)%",
+            range:"0-100%",
+            percent:25,
+            overtime:25,
+            buffs:[
+              {
+                type:"Item",
+                name:"water_bottle",
+                value:"5"
+              },
+              {
+                type:"Item",
+                name:"watering_can",
+                value:"10"
+              },
+              {
+                type:"Item",
+                name:"watering_can",
+                value:"10"
+              }
+            ]
+          },
+          fert:{
+            label:"Fertilizer",
+            value:"50(+10)%",
+            range:"0-100%",
+            percent:50,
+            overtime:10,
+            buffs:[
+              {
+                type:"Item",
+                name:"cheap_fertilizer",
+                value:"10"
+              }
+            ]
+          },
+        }
+      })
+    }
+
+  </script>
+</body>
+</html>

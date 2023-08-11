@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+/*
+font-family: 'Khand', sans-serif;
+font-family: 'Bahianita', cursive;
+font-family: 'Do Hyeon', sans-serif;
+*/
+@font-face {
+    font-family: gotbook;
+    src: url(https://cdn.discordapp.com/attachments/644631964774694942/738180868748607649/GOTHAM-MEDIUM.OTF);
+}
+
+@font-face {
+    font-family: gotblack;
+    src: url(https://cdn.discordapp.com/attachments/644631964774694942/738179761620123698/GOTHAM-BOLD.OTF);
+}
+
+* { 
+    font-family: 'Noto Sans TC';
+}
+  
+body {
+    background: transparent !important;
+    margin-top:80px;
+}
+
+#bankingContainer {
+    opacity: 0.9;
+    background: rgb(21, 21, 21) !important;
+    border-radius: 10px;
+    min-height:800px;
+    max-height:800px;
+    display:none;
+}
+
+#ATMContainer {
+    background: rgba(26, 26, 26, 0.842) !important;
+    border-radius: 10px;
+    min-height:800px;
+    max-height:800px;
+    display:none;
+}
+
+.statement:hover {
+    background: rgba(150, 149, 149, 0.5) !important;
+}
+
+#v-pills-tabContent, #v-pills-tabContent-atm {
+    overflow-y: scroll;
+    min-height:100%;
+}
+
+#v-pills-tabContent::-webkit-scrollbar-track, #v-pills-tabContent-atm::-webkit-scrollbar-track {
+    background-color:transparent;
+    border: none;
+}
+
+#v-pills-tabContent::-webkit-scrollbar-thumb, #v-pills-tabContent-atm::-webkit-scrollbar-thumb {
+    background-color:transparent;
+    border:none;
+}
+
+#v-pills-tabContent::-webkit-scrollbar, #v-pills-tabContent-atm::-webkit-scrollbar {
+    width: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color:transparent
+}
+
+.title {
+    color: white;
+}
+
+.content {
+    color: white;
+    font-size: 20px;
+}
+
+.img-fluid {
+    margin-top: 20px;
+    margin-bottom: 10px;;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fbc308;
+    background-color: #151515;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #fbc308;
+    text-decoration: underline;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #fbc308;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 213, 77, 0.795);
+}
+
+.pointRemind h5, .pointRemind p {
+    display: inline;
+
+}
+
+.alert {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+
+
+.exchangeContainer {
+    text-align: center;
+    background: rgba(34, 34, 34, 0.8);
+    padding: 25px;
+    border-radius: 5px;
+
+
+}
+
+.exchangeContainer span {
+    text-align: center;
+    color: #fff;
+}
+
+.exchangeContainer button {
+    float:right;
+    min-width: 25%;
+    max-height: 30% !important;
+}
+
+.productContainer {
+    text-align: center;
+    background: rgba(34, 34, 34, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+
+.productContainer span {
+    color: #fff;
+}
+
+.productContainer .input-group {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.productContainer .inputVal {
+    background: rgba(34, 34, 34, 0.8);
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.productContainer .label {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.productContainer .label.limit {
+    top: 45px;
+}

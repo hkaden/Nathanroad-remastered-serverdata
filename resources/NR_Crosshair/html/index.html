@@ -1,0 +1,66 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="dot"></div>
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="panel">
+        <div class="panel-preview-parent">  
+            <div class="panel-preview">
+                <div class="dot"></div>
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <select id="profiles"></select>
+        <div class="panel-heading">準星設定</div>
+        <div class="offset-tab">
+            <div class="tab-label">線偏移</div>
+            <input id="offset" value="0" min="0" max="30" type="range">
+        </div>
+        <div class="thickness-tab">
+            <div class="tab-label">線厚度</div>
+            <input id="thickness" value="1" min="1" max="20" type="range">
+        </div>
+        <div class="length-tab">
+            <div class="tab-label">長度</div>
+            <input id="length" value="1" min="1" max="100" type="range">
+        </div>
+        <div class="dot-tab">
+            <div class="tab-label">紅點</div>
+            <input id="dot-radius" value="1" min="1" max="10" type="range">
+        </div>
+        <div class="color-tab">
+            <div class="tab-label">顏色</div>
+            <input value="#FF0000" id="color"type="color">
+        </div>
+        <div class="button-tab">
+            <div data-turned="false" id="dot-switch" class="switch">
+                <div class="switch-heading">切換紅點</div>
+                <div class="switch-btns">
+                    <div class="on">開</div>
+                    <div class="off">關</div>
+                </div>
+            </div>
+            <div data-turned="false" id="lines-switch" class="switch">
+                <div class="switch-heading">線</div>
+                <div class="switch-btns">
+                    <div class="on">開</div>
+                    <div class="off">關</div>
+                </div>
+            </div>
+            <div class="save-button">儲存</div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>

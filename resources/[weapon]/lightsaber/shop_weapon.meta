@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WeaponShopItemArray>
+	<weaponShopItems>
+		<Item>
+			<lockHash>CU_WEP_LIGHTSABER</lockHash>
+			<nameHash>WEAPON_LIGHTSABER</nameHash>
+			<cost value ="14500"/>
+			<ammoCost value="100"/>
+			<textLabel>WT_LIGHTSABER</textLabel>
+			<weaponDesc>WTD_LIGHTSABER</weaponDesc>
+			<weaponTT>WTT_LIGHTSABER</weaponTT>
+			<weaponUppercase>WTU_LIGHTSABER</weaponUppercase>
+			<id value = "32"/>
+			<weaponComponents />
+		</Item>
+	</weaponShopItems>
+</WeaponShopItemArray>	

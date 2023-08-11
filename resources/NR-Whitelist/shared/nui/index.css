@@ -1,0 +1,244 @@
+* {
+    user-select: none;
+}
+
+.bodyContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(background.png) no-repeat center center fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    overflow: hidden;
+    font-family: 'Titillium Web';
+    display: none;
+}
+
+.appContainer {
+    width: 1240px;
+    height: 580px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #1c1e24;
+    border-radius: 3px;
+    border: 2px solid #262f3f;
+}
+
+.appTitle {
+    text-align: center;
+    color: white;
+    height: 15px;
+    width: 100%;
+    background-color: #1e242e;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.appContent {
+    margin-top: 20px;
+    margin-left: 25px;
+    color: white;
+}
+
+#appQuestionContainer {
+    margin-top: 60px;
+    margin-left: 25px;
+    color: white;
+}
+
+.appQuestion {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.appQuestionTitle {
+    font-size: 20px;
+}
+
+button {
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    border: 0;
+    outline: 0;
+    height: 30px;
+    width: 98%;
+    background-color: #ffa800;
+    color: #1a1a1a;
+    font-family: 'Titillium Web';
+    font-size: 18px;
+    transition: 0.1s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    color: #fff;
+    font-weight: 500;
+}
+
+h1 {
+    background: #f1f3f4 none repeat scroll 0 0 !important;
+    padding: 1rem !important;
+}
+
+#appQuestionContainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#appQuestionContainer li {
+    margin: 0;
+    padding: 0;
+}
+
+#appQuestionContainer label {
+    display: block;
+    background-color: #1e242e;
+    border-radius: 5px;
+    margin: 0.1em 0;
+    padding: 1em 2em;
+    text-align: start;
+    max-width: 70em;
+    margin-top: 20px;
+    border: 2px solid #262f3f;
+}
+
+#appQuestionContainer label:hover {
+    border: 2px solid rgba(255, 168, 0);
+}
+
+#appQuestionContainer input {
+    left: -9999px;
+    position: absolute;
+}
+
+#appQuestionContainer button:not(.startBtn) {
+    display: none;
+}
+
+#appQuestionContainer button, #appQuestionContainer label {
+    cursor: pointer;
+}
+
+/* listing with solutions */
+
+.question {
+    font-weight: bold;
+}
+
+.correct {
+    color: #0c0;
+}
+
+.wrong {
+    color: #c00;
+}
+
+.correct:before {
+    content: '✓';
+    color: #0d0;
+}
+
+.wrong:before {
+    content: '✗';
+    color: #f00;
+}
+
+.correct:before, .wrong:before {
+    font: 2em bold;
+    padding: 0 0.2em;
+}
+
+#scores, #scores td, #scores th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.lds-ring {
+    display: none;
+    position: fixed;
+    width: 101px;
+    height: 101px;
+    bottom: 47%;
+    left: 47%;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    width: 101px;
+    height: 101px;
+    margin: 6px;
+    border: 6px solid #ffa800;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ffa800 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.element {
+    background-color: #1e242e;
+    width: 80%;
+    height: 40px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border: 2px solid #262f3f;
+}
+
+hr {
+    width: 85%;
+    opacity: 0.1;
+    border: 1px solid white;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.full {
+    width: 97%;
+}
+
+i {
+    opacity: 0.4;
+    position: relative;
+    top: 1px;
+}

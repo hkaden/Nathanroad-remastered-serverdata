@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SContentUnlocks>
+
+
+    <!-- WEAPON BAT -->
+
+  <listOfUnlocks>
+	<Item>CU_WEP_COWHAMMER</Item>
+  </listOfUnlocks>
+  
+  <listOfUnlocks>
+	<Item>CU_WEP_JOKER</Item>
+  </listOfUnlocks>
+
+  
+  <!-- WEAPON GOLF -->
+   
+  
+  <listOfUnlocks>
+	<Item>CU_WEP_TOWERSENTINEL</Item>
+  </listOfUnlocks>
+  
+  <listOfUnlocks>
+	<Item>CU_WEP_CATBURGLAR</Item>
+  </listOfUnlocks>
+
+  
+  
+</SContentUnlocks>
+
+
+
